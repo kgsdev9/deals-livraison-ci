@@ -165,7 +165,7 @@
                                 </div>
                                 <a href="https://wa.me/{{$livreur->whatsApp}}?text=Salut , monsieur {{$livreur->nom}} de informatique.com J'aimerais solliticter vos service  : pour une livraison" class="btn btn-warning btn-sm px-2 py-0">
 
-                                    <i class="bi bi-whatsapp"></i>   Contactez-moi sur whattssap</a>
+                                    <i class="bi bi-whatsapp"></i>   Contactez-moi sur WhatsApp</a>
                             </div>
                         </div>
                         @endforeach
@@ -214,7 +214,7 @@
                                                 <div>
                                                     <!-- heading -->
                                                     <h4 class="mb-0">{{$commune->nom}}</h4>
-                                                    <!-- text -->
+                                                    <p>Total livreurs {{count($commune->livreurs)}}</p>
                                                 </div>
                                                 <!-- arrow -->
                                                 <a href="#" class="text-inherit">
