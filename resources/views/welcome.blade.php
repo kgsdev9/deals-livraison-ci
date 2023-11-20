@@ -151,17 +151,21 @@
                                        {{$livreur->nom}}  {{$livreur->prenom}}
                                     </h5>
                                     <p class="card-text text-muted small">
-                                        Zone d'intervention  Abobo
+                                        Zone d'intervention
+                                        @foreach ($livreur->communes as $commune)
+                                            {{$commune->nom}}
+                                        @endforeach
                                     </p>
+
                                 </div>
                                 <div class="card-footer bg-white border-0 d-flex align-items-center justify-content-between p-3 border-top">
                                     <p class="text-muted small mb-0">
                                        345  Course </p>
 
                                 </div>
-                                <a href="https://wa.me/{{$livreur->whatsApp}}?text=Salut , monsieur {{$livreur->nom}} de informatique.com J'aimerais solliticter vos service  : pour une livraison" class="btn btn-warning btn-sm px-2 py-0">+
+                                <a href="https://wa.me/{{$livreur->whatsApp}}?text=Salut , monsieur {{$livreur->nom}} de informatique.com J'aimerais solliticter vos service  : pour une livraison" class="btn btn-warning btn-sm px-2 py-0">
 
-                                    Contactez-moi sur whattssap</a>
+                                    <i class="bi bi-whatsapp"></i>   Contactez-moi sur whattssap</a>
                             </div>
                         </div>
                         @endforeach
