@@ -11,14 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('livreurs', function (Blueprint $table) {
+        Schema::create('commune_livreur', function (Blueprint $table) {
             $table->id();
-            $table->string('nom');
-            $table->string('prenom');
-            $table->string('telephone')->unique();
-            $table->string('whatsApp')->unique();
-            $table->string('photo');
-            $table->string('adresse');
+            $table->unsignedBigInteger('commune_id')->nullable();
+            $table->unsignedBigInteger('livreur_id')->nullable();
+            $table->foreign('commune_id')->references('id')->on('communes');
+            $table->foreign('livreur_id')->references('id')->on('livreurs');
             $table->timestamps();
         });
     }
@@ -28,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('livreurs');
+        Schema::dropIfExists('commune_livreur');
     }
 };

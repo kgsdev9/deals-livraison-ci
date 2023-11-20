@@ -12,11 +12,14 @@ class Livreur extends Model
     protected $fillable = [
         'nom',
         'prenom',
-        'email',
         'telephone',
         'whatsApp',
         'photo',
         'adresse',
-        'piece_identite'
     ];
+
+
+    public function communes() {
+        return $this->belongsToMany(Commune::class, 'commune_livreur', 'livreur_id', 'commune_id');
+    }
 }
