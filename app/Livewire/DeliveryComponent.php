@@ -19,16 +19,22 @@ class DeliveryComponent extends Component
     public $country_id= "";
     public $city_id = "";
     public $price_livraison= "";
-    public $te = "";
     public $resetprice = "";
+
+
+
+    protected $rules = [
+        'city_id' => 'required',
+        'country_id' => 'required'
+    ];
 
     public $tableau = [];
 
     public function changeEvent($id)
     {
-      $pricelivraison =   PrixLivraison::where('id', $id)->first();
-     $this->pu =  $pricelivraison->prix;
-     $this->poids =  $pricelivraison->poids;
+        $pricelivraison =   PrixLivraison::where('id', $id)->first();
+        $this->pu =  $pricelivraison->prix;
+        $this->poids =  $pricelivraison->poids;
 
     }
 
@@ -55,14 +61,16 @@ class DeliveryComponent extends Component
 
     public function saveLivraison()
     {
-      $livraison =   Livraison::create([
-        'code_livraison'=> rand(1000, 2000),
-        'date_livraison'=> now(),
-        'adresse' => 'deux plateaux',
-        'user_id' => Auth::user()->id,
-        'country_id' => 1,
-        'city_id' => 1,
-        ]);
+        $this->validate();
+        
+        $livraison =   Livraison::create([
+            'code_livraison'=> rand(1000, 2000),
+            'date_livraison'=> now(),
+            'adresse' => 'deux plateaux',
+            'user_id' => Auth::user()->id,
+            'country_id' => $this->country_id,
+            'city_id' => $this->city_id,
+            ]);
 
         foreach($this->tableau as $varticle)
         {

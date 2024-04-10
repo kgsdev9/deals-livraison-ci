@@ -13,14 +13,12 @@ class DeliveryPrice extends Component
         'prix' => 'required'
     ];
 
-
     public $dispkayform = true;
     public $poids, $prix, $search = "", $pricelivraisonId;
 
     public function displayform() {
         $this->dispkayform = false;
     }
-
 
     public function edit($id){
         try {
@@ -36,14 +34,11 @@ class DeliveryPrice extends Component
         } catch (\Exception $ex) {
             session()->flash('error','Oups!!');
         }
-
     }
-
 
     public function  store()
     {
         $this->validate();
-
         PrixLivraison::create([
             'prix'=> $this->prix,
             'poids'=> $this->poids,

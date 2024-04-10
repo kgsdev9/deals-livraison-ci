@@ -10,7 +10,7 @@
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item">
-                                    <a href="#">Accueil</a>
+                                    <a href="{{route('dashboard')}}">Accueil</a>
                                 </li>
                                 <li class="breadcrumb-item">
                                     <a href="#">Gestion des livraisons</a>

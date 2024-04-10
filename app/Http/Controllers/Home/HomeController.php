@@ -1,11 +1,7 @@
 <?php
 
 namespace App\Http\Controllers\Home;
-
 use App\Http\Controllers\Controller;
-use App\Models\Commune;
-use App\Models\Livreur;
-use App\Models\User;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -15,10 +11,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('welcome', [
-            'allLivreurs' => User::all(),
-            'allCommunes' => User::all()
-        ]);
+        return view('welcome');
     }
 
     public function deliveryprice() {

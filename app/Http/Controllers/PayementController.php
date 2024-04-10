@@ -12,7 +12,6 @@ class PayementController extends Controller
      */
     public function initialisePayment(Request $request)
     {
-        //dd($request->all());
         $data = array(
             'merchantId' => "PP-F2197",
             'amount' => $request->amount * 650,
@@ -48,11 +47,13 @@ class PayementController extends Controller
 
     }
 
-    public function successpayment() {
+    public function successpayment()
+    {
 
     }
 
-    public function failledpayment() {
+    public function failledpayment()
+    {
 
     }
 

@@ -77,8 +77,8 @@
                         {{$article->designation}}
 
                     </td>
-                    <td>{{$article->pu}}</td>
-                    <td>{{$article->poids}} €</td>
+                    <td>{{$article->poids}}</td>
+                    <td>{{$article->pu}} €</td>
                     <td>{{$article->pu}}</td>
                 </tr>
                 @endforeach

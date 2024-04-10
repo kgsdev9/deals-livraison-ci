@@ -1,34 +1,24 @@
 
-
+@section('title', 'Créer une nouvelle livraison')
 <div>
-
-
     <section class="py-6">
         <div class="container">
             <div class="row">
                 <div class="col-xl-8 col-lg-8 col-md-12 col-12">
-                    <!-- Form -->
-
-                        <!-- Card -->
                         <div class="card mb-4">
-                            <!-- Card header -->
                             <div class="card-header">
                                 <h4 class="mb-0">Rénseigner la livraison </h4>
                             </div>
-                            <!-- Card body -->
                             <div class="card-body">
                                 <div class="row g-3">
-                                    <!-- First name  -->
                                     <div class="col-12 col-md-6">
                                         <label class="form-label" for="fname">Nom du destinataire</label>
                                         <input type="text" id="nom_destinataire" class="form-control" placeholder="Guy" required="">
-
                                     </div>
-                                    <!-- Last name  -->
+
                                     <div class="col-12 col-md-6">
                                         <label class="form-label" for="lname">Prénom du destinataire</label>
                                         <input type="text" id="prenom_destinataire" class="form-control" placeholder="Stephane" required="">
-
                                     </div>
                                     <div class="col-12 col-md-6">
                                         <label class="form-label" for="courseState">Selectionner un pays </label>
@@ -119,7 +109,7 @@
                 </div>
                 <div class="col-lg-4 col-md-12 col-12">
                     <!-- Card -->
-                    <div class="card border-0 mb-3">
+                    {{-- <div class="card border-0 mb-3">
                         <!-- Card body -->
                         <div class="p-5 text-center">
                             <span class="badge bg-warning">Selected Plan</span>
@@ -214,21 +204,17 @@
                                 </li>
                             </ul>
                         </div>
-                        <!-- hr -->
                         <hr class="m-0">
                         <div class="p-4">
                             <a href="#" class="btn btn-outline-primary">Change the Plan</a>
                         </div>
-                    </div>
-                    <!-- Card -->
+                    </div> --}}
                     <div class="card border-0 mb-3 mb-lg-0">
-                        <!-- Card body -->
                         <div class="card-body">
-                            <h3 class="mb-2">Discount Codes</h3>
-
+                            <h3 class="mb-2">Code de reduction de livraison</h3>
                                 <div class="input-group">
-                                    <input type="text" class="form-control" placeholder="Enter your code" aria-describedby="couponCode">
-                                    <button class="btn btn-secondary" id="couponCode">Apply</button>
+                                    <input type="text" class="form-control" placeholder="Code coupon" aria-describedby="couponCode">
+                                    <button class="btn btn-secondary" id="couponCode">Appliquer</button>
                                 </div>
 
                         </div>

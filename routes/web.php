@@ -6,6 +6,7 @@ use App\Http\Controllers\Home\HomeController;
 use App\Http\Controllers\Livreurs\RegisterController;
 use App\Http\Controllers\NotificationController;
 use App\Http\Controllers\PayementController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -31,5 +32,5 @@ Route::get('/price-delivery', [HomeController::class, 'deliveryprice'])->name('d
 Route::post('/initialise-payment-Auth-=1', [PayementController::class, 'initialisePayment'])->name('initialise.payment');
 Route::get('/paymentsucces', [PayementController::class, 'successpayment'])->name('payment.sucess');
 Route::get('/paymentfailled', [PayementController::class, 'failledpayment'])->name('failled.payment');
-
+Route::get('gestion-users', UserController::class)->name('users.index');
 Auth::routes();
