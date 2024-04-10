@@ -10,6 +10,9 @@ class Livraison extends Model
     use HasFactory;
 
     protected $fillable = [
+        'nom',
+        'prenom',
+        'paymentstatus',
         'code_livraison',
         'date_livraison	',
         'adresse',

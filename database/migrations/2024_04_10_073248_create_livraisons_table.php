@@ -14,9 +14,12 @@ return new class extends Migration
         Schema::create('livraisons', function (Blueprint $table) {
             $table->id();
             $table->string('code_livraison')->unique();
+            $table->string('nom');
+            $table->string('prenom');
             $table->dateTime('date_livraison');
             $table->text('adresse');
             $table->enum('status', ['encours', 'echec', 'livree']);
+            $table->enum('paymentstatus', ['encours', 'echec', 'effectue']);
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('country_id');
             $table->unsignedBigInteger('city_id');
