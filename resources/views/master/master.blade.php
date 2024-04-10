@@ -14,7 +14,7 @@
 		<!-- Theme CSS -->
 		<link rel="stylesheet" href="{{asset('assets/css/theme.min.css')}}">
 		<link rel="Chap" href="lives.ci">
-        <link rel="stylesheet" href="http://localhost:8000/backend/plugins/select2/css/select2.min.css">
+
 		<link rel="stylesheet" href="{{asset('assets/select2-bootstrap4.min.css')}}">
 		<link rel="stylesheet" href="{{asset('assets/select2.min.css')}}">
 		<title>@yield('title')</title>
@@ -24,12 +24,19 @@
 		<nav class="navbar navbar-expand-lg">
 			<div class="container px-0">
 				<a class="navbar-brand text-dark" href="#">
-					KGS LIVRAISON
+					VTP
 					<div class="d-flex align-items-center order-lg-3 ms-lg-3">
 						<div class="d-flex align-items-center">
-							<a href="{{route('register.livreur')}}" class="btn btn-warning d-none d-md-block">Inscription Livreur</a>
+							<a href="{{route('create.delivery')}}" class="btn btn-warning d-md-block"> <i class="fe fe-plus"></i> Déposer une livraison</a>
+                            &nbsp;
+                            @guest
+                            <a href="{{route('login')}}" class="btn btn-outline-secondary d-md-block"> <i class="fe fe-user"></i>Connexion</a>
+                             @else
+                             <a href="{{route('dashboard')}}" class="btn btn-outline-secondary d-md-block"> <i class="fe fe-user"></i> Mon Compte</a>
+                            @endguest
+
 						</div>
-						<buttonclass="navbar-toggler collapsed ms-2 ms-lg-0"type="button"data-bs-toggle="collapse"data-bs-target="#navbar-default"aria-controls="navbar-default"aria-expanded="false"aria-label="Toggle navigation">
+						<button class="navbar-toggler collapsed ms-2 ms-lg-0"type="button"data-bs-toggle="collapse"data-bs-target="#navbar-default"aria-controls="navbar-default"aria-expanded="false"aria-label="Toggle navigation">
 							<span class="icon-bar top-bar mt-0"></span>
 							<span class="icon-bar middle-bar"></span>
 							<span class="icon-bar bottom-bar"></span>
@@ -39,11 +46,11 @@
 					<!-- Collapse -->
 					<div class="collapse navbar-collapse" id="navbar-default">
 						<ul class="navbar-nav ms-auto">
-							<li class="nav-item"><a class="nav-link" href="#">Accueil</a></li>
-							<li class="nav-item"><a class="nav-link" href="#" >Catalogue livreurs</a></li>
-							<li class="nav-item"><a class="nav-link" href="#" >Boutique Pro</a></li>
-							<li class="nav-item"><a class="nav-link" href="#" >Course Administratif</a></li>
-							<li class="nav-item"><a class="nav-link" href="#">A propos</a></li>
+							<li class="nav-item"><a class="nav-link" href="{{route('home')}}">Accueil</a></li>
+							<li class="nav-item"><a class="nav-link" href="#" >Témoignages</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#" >A propos</a></li>
+                            <li class="nav-item"><a class="nav-link" href="https://vtp-market.com/" target="_blank">VTP MARKET </a></li>
+							<li class="nav-item"><a class="nav-link" href="#">Conctact</a></li>
 						</ul>
 					</div>
 				</div>
@@ -55,14 +62,14 @@
 					<div class="row align-items-center g-0 border-top py-2 mt-6">
 						<!-- Desc -->
 						<div class="col-lg-4 col-md-5 col-12">
-							<span>©<span id="copyright2"><script>                            document.getElementById("copyright2").appendChild(document.createTextNode(new Date().getFullYear()));                        </script></span>Livraison programmation ci</span>
+							<span>©<span id="copyright2"><script>                            document.getElementById("copyright2").appendChild(document.createTextNode(new Date().getFullYear()));                        </script></span>Livraison garantie avec vtp livraison </span>
 						</div>
 						<!-- Links -->
 						<div class="col-12 col-md-7 col-lg-8 d-md-flex justify-content-end">
 							<nav class="nav nav-footer">
 								<a class="nav-link ps-0" href="#">Développé par KGS INFORMATIQUE</a>
-								<a class="nav-link px-2 px-md-3" href="#">Les livreurs</a>
-								<a class="nav-link" href="#">Terme et conditions</a>
+								<a class="nav-link px-2 px-md-3" href="{{route('create.delivery')}}">Déposer une  livraison</a>
+								<a class="nav-link" href="#">FAQ</a>
 							</nav>
 						</div>
 					</div>
@@ -84,13 +91,7 @@
 			<script src="../../assets/libs/tippy.js/dist/tippy-bundle.umd.min.js"></script>
 			<script src="../../assets/js/vendors/tooltip.js"></script>
             @livewireScripts
-            <script src="{{asset('assets/select2.full.min.js')}}"></script>
-            <script>
-                $(function() {
-                    $('#members').select2({
-                        theme: 'bootstrap4',
-                    })
-                })
+
 
 		</body>
 

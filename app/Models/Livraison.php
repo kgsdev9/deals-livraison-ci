@@ -1,0 +1,30 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class Livraison extends Model
+{
+    use HasFactory;
+
+    protected $fillable = [
+        'code_livraison',
+        'date_livraison	',
+        'adresse',
+        'user_id',
+        'country_id',
+        'city_id',
+        'status'
+    ];
+
+    public function city()  {
+        return $this->belongsTo(City::class, 'city_id');
+    }
+
+
+    public function country()  {
+        return $this->belongsTo(Country::class, 'country_id');
+    }
+}

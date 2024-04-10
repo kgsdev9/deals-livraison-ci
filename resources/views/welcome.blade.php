@@ -2,7 +2,7 @@
 @extends('master.master')
 @section('title', 'Bienvenue sur livraison coursier')
 @section('master')
-        <!-- Page Content -->
+
         <main>
 
             <section class="bg-light py-8 bg-cover">
@@ -14,9 +14,9 @@
                             <div>
                                 <div class="text-center text-md-start">
                                     <!-- heading -->
-                                    <h1 class="display-2 fw-bold mb-3">Un click un livreur </h1>
+                                    <h1 class="display-2 fw-bold mb-3">Déposer votre livraison  </h1>
                                     <!-- lead -->
-                                    <p class="lead">Nous systeme perfectionner reunir tous les livreurs d'Abidjan pour vous servir rapidement.</p>
+                                    <p class="lead">Déposer une livraison et faites recevez votre livraison à domic.</p>
                                 </div>
                                 <div class="mt-8">
                                     <!-- card -->
@@ -46,22 +46,7 @@
                                                 </div>
                                                 <div class="col-12 col-md-4">
                                                     <!-- inpt group -->
-                                                    <div class="input-group mb-3 mb-md-0 border-md-0 border rounded-pill">
-                                                        <span class="input-group-text bg-transparent border-0 pe-0 ps-md-0" id="location">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16">
-                                                                <path
-                                                                    d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z">
-                                                                <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z">
-                                                            </svg>
-                                                        </span>
-                                                        <!-- search -->
-                                                        <input
-                                                            type="search"
-                                                            class="form-control rounded-pill border-0 ps-3 form-focus-none"
-                                                            placeholder="localisation"
-                                                            aria-label="Search Job"
-                                                            aria-describedby="localisation">
-                                                    </div>
+
                                                 </div>
                                                 <div class="col-12 col-md-3 text-end d-grid">
                                                     <!-- button -->
@@ -88,153 +73,97 @@
                 </div>
             </section>
 
+            <section class="pb-8 mt-4">
+                <div class="container mb-lg-8">
+                    <div class="row justify-content-center">
+                        <div class="col-md-10 col-12">
+                            <!-- Brand logo -->
+                            <span class="text-dark mb-3 d-block text-uppercase fw-semibold ls-xl text-center">NOS CLIENTS </span>
+                            <div class="row mt-8">
+                                <!-- logo -->
+                                <div class="col-xl-2 col-lg-4 col-md-4 col-6 text-center mb-4 mb-xl-0">
+                                    <img src="{{asset('airivoire.jpeg')}}" alt="logo" style="height:30px;">
+                                </div>
+                                <!-- logo -->
+                                <div class="col-xl-2 col-lg-4 col-md-4 col-6 text-center mb-4 mb-xl-0">
 
+                                </div>
+                                <!-- logo -->
+                                <div class="col-xl-2 col-lg-4 col-md-4 col-6 text-center mb-4 mb-xl-0">
+                                    <img src="{{asset('airfrance.jpg')}}" alt="logo" style="height:30px;">
+                                </div>
+                                <!-- logo -->
+                                <div class="col-xl-2 col-lg-4 col-md-4 col-6 text-center mb-4 mb-xl-0">
 
-            <section class="py-8">
-                <!-- container -->
-                <div class="container">
-                    <div class="row">
-                        <div class="offset-xl-1 col-xl-10 col-md-12 col-12">
-                            <!-- row -->
-                            <div class="row text-center">
-                                <!-- col -->
-                                <div class="col">
-                                    <div class="mb-3 mt-3">
-                                        <img src="https://geeksui.codescandy.com/geeks/assets/images/brand/gray-logo-airbnb.svg" alt="logo">
-                                    </div>
                                 </div>
-                                <!-- col -->
-                                <div class="col">
-                                    <div class="mb-3 mt-3">
-                                        <img src="https://geeksui.codescandy.com/geeks/assets/images/brand/gray-logo-discord.svg" alt="logo">
-                                    </div>
+                                <!-- logo -->
+                                <div class="col-xl-2 col-lg-4 col-md-4 col-6 text-center mb-4 mb-xl-0">
+                                    <img src="{{asset('aircanada.png')}}" alt="logo" style="height:30px;">
                                 </div>
-                                <div class="col">
-                                    <div class="mb-3 mt-3">
-                                        <img src="https://geeksui.codescandy.com/geeks/assets/images/brand/gray-logo-intercom.svg" alt="logo">
-                                    </div>
-                                </div>
-                                <!-- col -->
-                                <div class="col">
-                                    <div class="mb-3 mt-3">
-                                        <img src="https://geeksui.codescandy.com/geeks/assets/images/brand/gray-logo-stripe.svg" alt="logo">
-                                    </div>
-                                </div>
-                                <!-- col -->
-                                <div class="col">
-                                    <div class="mb-3 mt-3">
-                                        <img src="https://geeksui.codescandy.com/geeks/assets/images/brand/gray-logo-netflix.svg" alt="logo">
-                                    </div>
-                                </div>
+
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <section class="bg-light py-5 feature-list">
-                <div class="container py-4">
-                    <div class="text-center mb-8">
-                        <!-- col -->
-                        <!-- text -->
-                        <span class="text-uppercase text-primary fw-semibold ls-md"></span>
-                        <!-- heading -->
-                        <h4>Livreurs recemments inscrits sur la plateforme </H4>
+
+            <section class="py-8 ">
+                <div class="container my-lg-8">
+                    <div class="row ">
+                        <div class="justify-content center">
+                            <!-- caption -->
+                            <h2 class="display-4 mb-3 fw-bold text-center">Livraison Assurée par VTP! </h2>
+                            <p class="lead text-center">🚚 Livraison Assurée par VTP Livraison ! Ne vous inquiétez plus pour vos colis ! 🚚.</p>
+                        </div>
                     </div>
-                    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 row-cols-xl-5 g-4">
-                        @foreach ($allLivreurs as $livreur)
-                        <div class="col">
-                            <div class="card h-100 shadow-sm rounded-3 overflow-hidden video-card-item border position-relative">
-                                <img src="{{Storage::url($livreur->photo)}}" class="card-img-top" alt="..." >
-                                <div class="card-body p-3">
-                                    <h5 class="card-title mb-1 text-dark">
-                                       {{$livreur->nom}}  {{$livreur->prenom}}
-                                    </h5>
-                                    <p class="card-text text-muted small">
-                                        Zone d'intervention
-                                        @foreach ($livreur->communes as $commune)
-                                            {{$commune->nom}}
-                                        @endforeach
-                                    </p>
-
+                    <div class="row">
+                        <div class="col-md-4 col-12">
+                            <!-- card -->
+                            <div class="card mb-4 mb-lg-0">
+                                <!-- card body -->
+                                <div class="card-body p-5">
+                                    <!-- icon -->
+                                    <div class="mb-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-mortarboard text-primary" viewBox="0 0 16 16">
+                                            <path d="M8.211 2.047a.5.5 0 0 0-.422 0l-7.5 3.5a.5.5 0 0 0 .025.917l7.5 3a.5.5 0 0 0 .372 0L14 7.14V13a1 1 0 0 0-1 1v2h3v-2a1 1 0 0 0-1-1V6.739l.686-.275a.5.5 0 0 0 .025-.917l-7.5-3.5ZM8 8.46 1.758 5.965 8 3.052l6.242 2.913L8 8.46Z"></path>
+                                            <path d="M4.176 9.032a.5.5 0 0 0-.656.327l-.5 1.7a.5.5 0 0 0 .294.605l4.5 1.8a.5.5 0 0 0 .372 0l4.5-1.8a.5.5 0 0 0 .294-.605l-.5-1.7a.5.5 0 0 0-.656-.327L8 10.466 4.176 9.032Zm-.068 1.873.22-.748 3.496 1.311a.5.5 0 0 0 .352 0l3.496-1.311.22.748L8 12.46l-3.892-1.556Z"></path>
+                                        </svg>
+                                    </div>
+                                    <h3 class="mb-2">Livraison Assurée </h3>
+                                    <p class="mb-0">Avec VTP Livraison, vous pouvez être sûr(e) que vos colis seront livrés en toute sécurité et dans les délais impartis..</p>
                                 </div>
-                                <div class="card-footer bg-white border-0 d-flex align-items-center justify-content-between p-3 border-top">
-                                    <p class="text-muted small mb-0">
-                                       345  Course </p>
-
-                                </div>
-                                <a href="https://wa.me/{{$livreur->whatsApp}}?text=Salut , monsieur {{$livreur->nom}} de informatique.com J'aimerais solliticter vos service  : pour une livraison" class="btn btn-warning btn-sm px-2 py-0">
-
-                                    <i class="bi bi-whatsapp"></i>   Contactez-moi sur WhatsApp</a>
                             </div>
                         </div>
-                        @endforeach
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-
-
-
-
-            <section class="bg-white py-8">
-                <!-- container -->
-
-                <div class="container">
-                    <div class="row">
-                        <!-- col -->
-
-                        <div class="offset-xl-1 col-xl-10 col-md-12 col-12">
-                            <div class="row text-center">
-                                <div class="col-md-12 px-lg-8 mb-8 mt-6">
-                                    <!-- text -->
-
-
-                                    <h2 class="h1 fw-bold mt-3">Trouver un livreur par commune </h2>
-                                    <!-- text -->
-
-                                    <p class="mb-0 fs-4">Trouver facilement un livreur en fonction de votre zone </p>
+                        <div class="col-md-4 col-12">
+                            <!-- card -->
+                            <div class="card mb-4 mb-lg-0">
+                                <!-- card body -->
+                                <div class="card-body p-5">
+                                    <!-- icon -->
+                                    <div class="mb-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-people-fill text-primary" viewBox="0 0 16 16">
+                                            <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7Zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm-5.784 6A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216ZM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"></path>
+                                        </svg>
+                                    </div>
+                                    <h3 class="mb-2">Suivi en Temps Réel :</h3>
+                                    <p class="mb-0">Suivez votre colis à chaque étape du processus de livraison, depuis notre entrepôt jusqu'à votre porte..</p>
                                 </div>
                             </div>
-                            <div class="row gy-4">
-                                @foreach ($allCommunes as $commune)
-                                <div class="col-lg-3 col-md-4 col-12">
-                                    <!-- card -->
-
-                                    <div class="card border-top border-4 card-hover-with-icon">
-                                        <!-- card body -->
-
-                                        <div class="card-body">
-                                            <!-- icon  -->
-
-
-                                            <div class="d-flex align-items-center justify-content-between">
-                                                <div>
-                                                    <!-- heading -->
-                                                    <h4 class="mb-0">{{$commune->nom}}</h4>
-                                                    <p>Total livreurs {{count($commune->livreurs)}}</p>
-                                                </div>
-                                                <!-- arrow -->
-                                                <a href="#" class="text-inherit">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
-                                                        <path
-                                                            fill-rule="evenodd"
-                                                            d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z">
-                                                    </svg>
-                                                </a>
-                                            </div>
-                                        </div>
+                        </div>
+                        <div class="col-md-4 col-12">
+                            <!-- card -->
+                            <div class="card mb-4 mb-lg-0">
+                                <!-- card body -->
+                                <div class="card-body p-5">
+                                    <!-- icon -->
+                                    <div class="mb-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-graph-up-arrow text-primary" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd" d="M0 0h1v15h15v1H0V0Zm10 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V4.9l-3.613 4.417a.5.5 0 0 1-.74.037L7.06 6.767l-3.656 5.027a.5.5 0 0 1-.808-.588l4-5.5a.5.5 0 0 1 .758-.06l2.609 2.61L13.445 4H10.5a.5.5 0 0 1-.5-.5Z"></path>
+                                        </svg>
                                     </div>
-                                </div>
-                                @endforeach
-
-
-                                <!-- button -->
-
-                                <div class="col-12 mt-8 text-center">
-                                    <a href="#" class="btn btn-outline-warning">Consulter plus </a>
+                                    <h3 class="mb-2">Service Client Exceptionnel </h3>
+                                    <p class="mb-0">Notre équipe est là pour répondre à toutes vos questions et vous assister tout au long du processus de livraison..</p>
                                 </div>
                             </div>
                         </div>
@@ -243,405 +172,22 @@
             </section>
 
 
-
-            <section class="py-lg-8 pb-8">
-                <!-- container -->
-                <div class="container">
-                    <!-- row -->
+            <section class="py-8 bg-light">
+                <div class="container my-lg-8">
                     <div class="row">
-                        <div class="offset-xl-2 col-xl-8 col-md-12 col-12">
-                            <div class="text-center mb-8">
-                                <!-- col -->
-                                <!-- text -->
-                                <span class="text-uppercase text-primary fw-semibold ls-md"></span>
-                                <!-- heading -->
-                                <h2 class="h1 fw-bold mt-3">Livraison postés recemments </h2>
-                            </div>
-                            <!-- row -->
-
-                            <div class="card card-bordered mb-4 card-hover cursor-pointer">
-                                <!-- card body -->
-                                <div class="card-body">
-                                    <div>
-                                        <div class="d-md-flex">
-                                            <div class="mb-3 mb-md-0">
-                                                <!-- Img -->
-                                                <img src="https://geeksui.codescandy.com/geeks/assets/images/job/job-brand-logo/job-list-logo-1.svg" alt="Geeks UI - Bootstrap 5 Template" class="icon-shape border rounded-circle">
-                                            </div>
-                                            <!-- text -->
-                                            <div class="ms-md-3 w-100 mt-3 mt-xl-1">
-                                                <div class="d-flex justify-content-between mb-5">
-                                                    <div>
-                                                        <!-- heading -->
-                                                        <h3 class="mb-1 fs-4">
-                                                            <a href="https://geeksui.codescandy.com/geeks/pages/jobs/job-single.html" class="text-inherit">Software Engineer (Web3/Crypto)</a>
-                                                            <span class="badge bg-danger-soft ms-2">Featured Job</span>
-                                                        </h3>
-
-                                                        <div>
-                                                            <span>at HelpDesk</span>
-                                                            <!-- star -->
-                                                            <span class="text-dark ms-2 fw-medium">
-                                                                4.5
-                                                                <svg
-                                                                    xmlns="http://www.w3.org/2000/svg"
-                                                                    width="10"
-                                                                    height="10"
-                                                                    fill="currentColor"
-                                                                    class="bi bi-star-fill text-warning align-baseline"
-                                                                    viewBox="0 0 16 16">
-                                                                    <path
-                                                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z">
-                                                                </svg>
-                                                            </span>
-                                                            <span class="ms-0">(131 Reviews)</span>
-                                                        </div>
-                                                    </div>
-                                                    <div>
-                                                        <!-- bookmark -->
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmark bookmark" viewBox="0 0 16 16">
-                                                            <path
-                                                                d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5V2zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1H4z">
-                                                        </svg>
-                                                    </div>
-                                                </div>
-
-                                                <div class="d-md-flex justify-content-between">
-                                                    <div class="mb-2 mb-md-0">
-                                                        <!-- year -->
-                                                        <span class="me-2">
-                                                            <i class="fe fe-briefcase"></i>
-                                                            <span class="ms-1">1 - 5 years</span>
-                                                        </span>
-                                                        <!-- salary -->
-
-                                                        <span class="me-2">
-                                                            <i class="fe fe-dollar-sign"></i>
-                                                            <span class="ms-1">12k - 18k</span>
-                                                        </span>
-                                                        <!-- location -->
-                                                        <span class="me-2">
-                                                            <i class="fe fe-map-pin"></i>
-                                                            <span class="ms-1">Ahmedabad, Gujarat</span>
-                                                        </span>
-                                                    </div>
-                                                    <!-- time -->
-                                                    <div>
-                                                        <i class="fe fe-clock"></i>
-                                                        <span>21 hours ago</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- card -->
-                            <div class="card card-bordered mb-4 card-hover cursor-pointer">
-                                <!-- card body -->
-                                <div class="card-body">
-                                    <div>
-                                        <div class="d-md-flex">
-                                            <div class="mb-3 mb-md-0">
-                                                <!-- Img -->
-
-                                                <img src="https://geeksui.codescandy.com/geeks/assets/images/job/job-brand-logo/job-list-logo-2.svg" alt="Geeks Bootstrap 5 Template" class="icon-shape border rounded-circle">
-                                            </div>
-                                            <!-- text -->
-                                            <div class="ms-md-3 w-100 mt-3 mt-xl-1">
-                                                <div class="d-flex justify-content-between mb-4">
-                                                    <div>
-                                                        <h3 class="mb-1 fs-4"><a href="https://geeksui.codescandy.com/geeks/pages/jobs/job-single.html" class="text-inherit">Senior React Developer</a></h3>
-                                                        <div>
-                                                            <span>at Airtable</span>
-                                                            <!-- icon -->
-                                                            <span class="text-dark ms-2 fw-medium">
-                                                                5.0
-                                                                <svg
-                                                                    xmlns="http://www.w3.org/2000/svg"
-                                                                    width="10"
-                                                                    height="10"
-                                                                    fill="currentColor"
-                                                                    class="bi bi-star-fill text-warning align-baseline"
-                                                                    viewBox="0 0 16 16">
-                                                                    <path
-                                                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z">
-                                                                </svg>
-                                                            </span>
-                                                            <span class="ms-0">(324 Reviews)</span>
-                                                        </div>
-                                                    </div>
-                                                    <div>
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmark bookmark" viewBox="0 0 16 16">
-                                                            <path
-                                                                d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5V2zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1H4z">
-                                                        </svg>
-                                                    </div>
-                                                </div>
-
-                                                <div class="d-md-flex justify-content-between">
-                                                    <div class="mb-2 mb-lg-0">
-                                                        <!-- year -->
-                                                        <span class="me-2">
-                                                            <i class="fe fe-briefcase"></i>
-                                                            <span class="ms-1">0 - 5 years</span>
-                                                        </span>
-                                                        <!-- salary -->
-                                                        <span class="me-2">
-                                                            <i class="fe fe-dollar-sign"></i>
-                                                            <span class="ms-1">5k - 8k</span>
-                                                        </span>
-                                                        <!-- location -->
-                                                        <span class="me-2">
-                                                            <i class="fe fe-map-pin"></i>
-                                                            <span class="ms-1">Jaipur, Rajasthan</span>
-                                                        </span>
-                                                    </div>
-                                                    <!-- day -->
-                                                    <div>
-                                                        <i class="fe fe-clock"></i>
-                                                        <span>1 day ago</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- card -->
-                            <div class="card card-bordered mb-4 card-hover cursor-pointer">
-                                <!-- card body -->
-                                <div class="card-body">
-                                    <div>
-                                        <div class="d-md-flex">
-                                            <div class="mb-3 mb-md-0">
-                                                <!-- Img -->
-
-                                                <img src="https://geeksui.codescandy.com/geeks/assets/images/job/job-brand-logo/job-list-logo-3.svg" alt class="icon-shape border rounded-circle">
-                                            </div>
-                                            <!-- text -->
-                                            <div class="ms-md-3 w-100 mt-3 mt-xl-1">
-                                                <div class="d-flex justify-content-between mb-4">
-                                                    <div>
-                                                        <!-- heading -->
-                                                        <h3 class="mb-1 fs-4"><a href="https://geeksui.codescandy.com/geeks/pages/jobs/job-single.html" class="text-inherit">Software Engineer (Web3/Crypto)</a></h3>
-                                                        <div>
-                                                            <span>at Square</span>
-                                                            <!-- icon -->
-                                                            <span class="text-dark ms-2 fw-medium">
-                                                                3.9
-                                                                <svg
-                                                                    xmlns="http://www.w3.org/2000/svg"
-                                                                    width="10"
-                                                                    height="10"
-                                                                    fill="currentColor"
-                                                                    class="bi bi-star-fill text-warning align-baseline"
-                                                                    viewBox="0 0 16 16">
-                                                                    <path
-                                                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z">
-                                                                </svg>
-                                                            </span>
-                                                            <span class="ms-0">(424 Reviews)</span>
-                                                        </div>
-                                                    </div>
-                                                    <div>
-                                                        <!-- icon -->
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmark bookmark" viewBox="0 0 16 16">
-                                                            <path
-                                                                d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5V2zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1H4z">
-                                                        </svg>
-                                                    </div>
-                                                </div>
-                                                <div>
-                                                    <div class="d-md-flex justify-content-between">
-                                                        <div class="mb-2 mb-md-0">
-                                                            <!-- year -->
-                                                            <span class="me-2">
-                                                                <i class="fe fe-briefcase"></i>
-                                                                <span class="ms-1">2 - 6 years</span>
-                                                            </span>
-                                                            <!-- year -->
-                                                            <span class="me-2">
-                                                                <i class="fe fe-dollar-sign"></i>
-                                                                <span class="ms-1">Not discloses</span>
-                                                            </span>
-                                                            <!-- location -->
-                                                            <span class="me-2">
-                                                                <i class="fe fe-map-pin"></i>
-                                                                <span class="ms-1">Hastsal, Delhi</span>
-                                                            </span>
-                                                        </div>
-                                                        <div>
-                                                            <!-- icon -->
-                                                            <i class="fe fe-clock"></i>
-                                                            <span>1 day ago</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- card -->
-                            <div class="card card-bordered mb-4 card-hover cursor-pointer">
-                                <!-- card body -->
-                                <div class="card-body">
-                                    <div>
-                                        <div class="d-md-flex">
-                                            <div class="mb-3 mb-md-0">
-                                                <!-- Img -->
-
-                                                <img src="https://geeksui.codescandy.com/geeks/assets/images/job/job-brand-logo/job-list-logo-4.svg" alt class="icon-shape border rounded-circle">
-                                            </div>
-                                            <!-- text -->
-                                            <div class="ms-md-3 w-100 mt-3 mt-xl-1">
-                                                <div class="d-flex justify-content-between mb-4">
-                                                    <div>
-                                                        <!-- heading -->
-                                                        <h3 class="mb-1 fs-4"><a href="https://geeksui.codescandy.com/geeks/pages/jobs/job-single.html" class="text-inherit">Lead Software Engineer</a></h3>
-                                                        <div>
-                                                            <span>at Dot</span>
-                                                            <!-- star -->
-                                                            <span class="text-dark ms-2 fw-medium">
-                                                                3.9
-                                                                <svg
-                                                                    xmlns="http://www.w3.org/2000/svg"
-                                                                    width="10"
-                                                                    height="10"
-                                                                    fill="currentColor"
-                                                                    class="bi bi-star-fill text-warning align-baseline"
-                                                                    viewBox="0 0 16 16">
-                                                                    <path
-                                                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z">
-                                                                </svg>
-                                                                <!-- reviews -->
-                                                            </span>
-                                                            <span class="ms-0">(523 Reviews)</span>
-                                                        </div>
-                                                    </div>
-                                                    <div>
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmark bookmark" viewBox="0 0 16 16">
-                                                            <path
-                                                                d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5V2zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1H4z">
-                                                        </svg>
-                                                    </div>
-                                                </div>
-                                                <div>
-                                                    <div class="d-md-flex justify-content-between">
-                                                        <div class="mb-2 mb-md-0">
-                                                            <!-- year -->
-                                                            <span class="me-2">
-                                                                <i class="fe fe-briefcase"></i>
-                                                                <span class="ms-1">0 - 2 years</span>
-                                                            </span>
-                                                            <span class="me-2">
-                                                                <!-- salary -->
-                                                                <i class="fe fe-dollar-sign"></i>
-                                                                <span class="ms-1">Not discloses</span>
-                                                            </span>
-                                                            <span class="me-2">
-                                                                <!-- location -->
-                                                                <i class="fe fe-map-pin"></i>
-                                                                <span class="ms-1">Pune, Chennai</span>
-                                                            </span>
-                                                        </div>
-                                                        <div>
-                                                            <!-- time -->
-                                                            <i class="fe fe-clock"></i>
-                                                            <span>1 Month ago</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- card -->
-                            <div class="card card-bordered mb-4 card-hover cursor-pointer">
-                                <!-- card body -->
-                                <div class="card-body">
-                                    <div>
-                                        <div class="d-md-flex">
-                                            <div class="mb-3 mb-md-0">
-                                                <!-- Img -->
-
-                                                <img src="https://geeksui.codescandy.com/geeks/assets/images/job/job-brand-logo/job-list-logo-5.svg" alt class="icon-shape border rounded-circle">
-                                            </div>
-                                            <!-- text -->
-                                            <div class="ms-md-3 w-100 mt-3 mt-xl-1">
-                                                <div class="d-flex justify-content-between mb-4">
-                                                    <div>
-                                                        <!-- heading -->
-                                                        <h3 class="mb-1 fs-4"><a href="https://geeksui.codescandy.com/geeks/pages/jobs/job-single.html" class="text-inherit">Senior Full Stack Engineer</a></h3>
-                                                        <div>
-                                                            <span>at Toggle</span>
-                                                            <span class="text-dark ms-2 fw-medium">
-                                                                4.9
-                                                                <svg
-                                                                    xmlns="http://www.w3.org/2000/svg"
-                                                                    width="10"
-                                                                    height="10"
-                                                                    fill="currentColor"
-                                                                    class="bi bi-star-fill text-warning align-baseline"
-                                                                    viewBox="0 0 16 16">
-                                                                    <path
-                                                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z">
-                                                                </svg>
-                                                            </span>
-                                                            <span class="ms-0">(923 Reviews)</span>
-                                                        </div>
-                                                    </div>
-                                                    <div>
-                                                        <!-- icon -->
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmark bookmark" viewBox="0 0 16 16">
-                                                            <path
-                                                                d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5V2zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1H4z">
-                                                        </svg>
-                                                    </div>
-                                                </div>
-                                                <div>
-                                                    <div class="d-md-flex justify-content-between">
-                                                        <div class="mb-2 mb-md-0">
-                                                            <!-- year -->
-                                                            <span class="me-2">
-                                                                <i class="fe fe-briefcase"></i>
-                                                                <span class="ms-1">2 - 6 years</span>
-                                                            </span>
-                                                            <!-- salary -->
-                                                            <span class="me-2">
-                                                                <i class="fe fe-dollar-sign"></i>
-                                                                <span class="ms-1">Not discloses</span>
-                                                            </span>
-                                                            <!-- location -->
-                                                            <span class="me-2">
-                                                                <i class="fe fe-map-pin"></i>
-                                                                <span class="ms-1">Ahmedabad, Gujarat</span>
-                                                            </span>
-                                                        </div>
-                                                        <div>
-                                                            <!-- time -->
-                                                            <i class="fe fe-clock"></i>
-                                                            <span>2 Month ago</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- card -->
-
-                            <!-- button -->
-                            <div class="mt-6 text-center">
-                                <a href="#!" class="btn btn-outline-primary">Browse All Jobs Postings</a>
-                            </div>
+                        <div class="offset-lg-2 col-lg-8 col-md-12 col-12 text-center">
+                            <span class="fs-4 text-warning ls-md text-uppercase fw-semibold">LIVRAISON RAPIDE AVEC VTP </span>
+                            <!-- heading  -->
+                            <h2 class="display-3 mt-4 mb-3 fw-bold"></h2>
+                            <!-- para  -->
+                            <p class="lead px-lg- 8 mb-6">Déposez une Livraison avec VTP Livraison et Recevez Votre Colis Chez Vous .</p>
+                            <a href="{{route('create.delivery')}}" class="btn btn-primary">Commencer</a>
                         </div>
                     </div>
                 </div>
             </section>
+
+
 
         </main>
         <!-- footer -->
