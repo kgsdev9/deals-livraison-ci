@@ -29,6 +29,11 @@
                     </div>
 
                     <div class="form-check me-2">
+                        <input type="radio" id="paymentRadioTwo" name="paymentmethod" class="form-check-input" required="" value="MOMOCI">
+                        <label class="form-check-label" for="paymentRadioTwo"><img src="{{asset('paymentmode/mtn.svg')}}" alt="card" style="height:25px;"></label>
+                    </div>
+
+                    <div class="form-check me-2">
                         <input type="radio" id="paymentRadioTwo" name="paymentmethod" class="form-check-input" required="" value="CARD">
                         <label class="form-check-label" for="paymentRadioTwo"><img src="{{asset('paymentmode/visa.svg')}}" alt="card" style="height:25px;"></label>
                     </div>

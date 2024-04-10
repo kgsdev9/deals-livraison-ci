@@ -23,7 +23,7 @@
 	<body class="bg-white">
 		<nav class="navbar navbar-expand-lg">
 			<div class="container px-0">
-				<a class="navbar-brand text-dark" href="#">
+				<a class="navbar-brand text-dark" href="/">
 					VTP
 					<div class="d-flex align-items-center order-lg-3 ms-lg-3">
 						<div class="d-flex align-items-center">
@@ -67,7 +67,7 @@
 						<!-- Links -->
 						<div class="col-12 col-md-7 col-lg-8 d-md-flex justify-content-end">
 							<nav class="nav nav-footer">
-								<a class="nav-link ps-0" href="#">Développé par KGS INFORMATIQUE</a>
+								<a class="nav-link ps-0" href="#">VTP GROUP </a>
 								<a class="nav-link px-2 px-md-3" href="{{route('create.delivery')}}">Déposer une  livraison</a>
 								<a class="nav-link" href="#">FAQ</a>
 							</nav>

@@ -97,7 +97,7 @@
                             <p class="text-dark fs-6 fw-semibold mb-0"></p>
                         </div>
                         <div class="border-start w-50 py-3 px-4">
-                            <button class="btn btn-outline-danger"> Visualiser</button>
+                            <a class="btn btn-outline-danger" href="{{route('show.delivery', $liste->id)}}"> Visualiser</a>
                         </div>
                     </div>
                 </div>
