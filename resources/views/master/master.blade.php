@@ -30,7 +30,7 @@
 							<a href="{{route('create.delivery')}}" class="btn btn-warning d-md-block"> <i class="fe fe-plus"></i> Déposer</a>
                             &nbsp;
                             @guest
-                            <a href="{{route('login')}}" class="btn btn-outline-secondary d-md-block"> <i class="fe fe-user"></i>Connexion</a>
+                            <a href="{{route('login')}}" class="btn btn-outline-secondary d-md-block"> <i class="fe fe-user"></i></a>
                              @else
                              <a href="{{route('dashboard')}}" class="btn btn-outline-secondary d-md-block"> <i class="fe fe-user"></i></a>
                             @endguest

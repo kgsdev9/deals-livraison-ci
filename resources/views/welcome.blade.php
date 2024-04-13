@@ -190,36 +190,8 @@
                         <!-- para -->
                         <p class="lead">Les livraisons internationales peuvent être un défi passionnant, avec la diversité des cultures, des langues et des réglementations à prendre en compte. Votre engagement à satisfaire vos clients partout dans le monde est admirable..</p>
                     </div>
-                    <div class="col-lg-3 col-md-6 col-6">
-                        <!-- counter -->
-                        <div class="border-top pt-4 mt-6 mb-5">
-                            <h1 class="display-3 fw-bold mb-0">20M</h1>
-                            <p class="text-uppercase">Learners</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-6">
-                        <!-- counter -->
-                        <div class="border-top pt-4 mt-6 mb-5">
-                            <h1 class="display-3 fw-bold mb-0">57K</h1>
-                            <p class="text-uppercase">Instructors</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-6">
-                        <!-- counter -->
-                        <div class="border-top pt-4 mt-6 mb-5">
-                            <h1 class="display-3 fw-bold mb-0">21K</h1>
-                            <p class="text-uppercase">Courses</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-6">
-                        <!-- counter -->
-                        <div class="border-top pt-4 mt-6 mb-5">
-                            <h1 class="display-3 fw-bold mb-0">380M</h1>
-                            <p class="text-uppercase">Course enrollments</p>
-                        </div>
-                    </div>
                 </div>
-
+                <br>
                 <div class="gallery mb-8">
                     <!-- gallery-item -->
                     <figure class="gallery__item gallery__item--1 mb-0">
