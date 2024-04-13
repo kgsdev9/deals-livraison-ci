@@ -8,7 +8,7 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-            @if($livraison>0)
+            @if(!is_null($livraison) && !empty($livraison))
             <div class="mb-3 col-12 col-md-12 mb-4">
                 <h5 class="mb-3">Choissisez un moyen de debit </h5>
 
