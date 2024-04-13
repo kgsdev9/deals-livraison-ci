@@ -16,7 +16,7 @@
                                     <!-- heading -->
                                     <h1 class="display-2 fw-bold mb-3">Déposer votre livraison  </h1>
                                     <!-- lead -->
-                                    <p class="lead">Déposer une livraison et faites recevez votre livraison à domic.</p>
+                                    <p class="lead">Faites-nous confiance pour prendre soin de votre livraison et vous offrir la tranquillité d'esprit que vous méritez. Déposez votre livraison sur  VTP MARKET  dès aujourd'hui et laissez-nous vous montrer ce que signifie une livraison en toute sécurité..</p>
                                 </div>
                                 <div class="mt-8">
                                     <!-- card -->
@@ -168,17 +168,167 @@
                 </div>
             </section>
 
+            <section class="py-8 bg-gray-200">
+                <div class="container my-lg-8">
+                    <!-- row -->
+                    <div class="row justify-content-center text-center">
+                        <div class="col-md-9 col-12">
+                            <!-- heading -->
+                            <h2 class="display-4">  🌟 Un service de qualité assuré par une équipe de qualité 🌟</h2>
+                            <p class="lead px-lg-8 mb-6">Nous sommes fiers de notre dévouement à fournir un service qui dépasse les attentes, à chaque interaction. Notre équipe est non seulement compétente et expérimentée, mais elle est également passionnée par ce qu'elle fait.</p>
+                            <!-- button -->
+                            <div class="d-grid d-md-block">
+                                <a href="../sign-up.html" class="btn btn-primary mb-2 mb-md-0">Consulter les départs imminents</a>
+                                <a href="{{route('create.delivery')}}" class="btn btn-info">Déposer une livraison</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-            <section class="py-8 bg-light">
+
+            <section class="py-8 bg-white">
                 <div class="container my-lg-8">
                     <div class="row">
-                        <div class="offset-lg-2 col-lg-8 col-md-12 col-12 text-center">
-                            <span class="fs-4 text-warning ls-md text-uppercase fw-semibold">LIVRAISON RAPIDE AVEC VTP </span>
-                            <!-- heading  -->
-                            <h2 class="display-3 mt-4 mb-3 fw-bold"></h2>
-                            <!-- para  -->
-                            <p class="lead px-lg- 8 mb-6">Déposez une Livraison avec VTP Livraison et Recevez Votre Colis Chez Vous .</p>
-                            <a href="{{route('create.delivery')}}" class="btn btn-primary">Commencer</a>
+                        <div class="col-lg-6 col-md-8 col-12 mb-8">
+                            <h2 class="display-4 mb-3 fw-bold">NOUS PARCOURONS LE MONDE </h2>
+                            <p class="lead mb-5">
+                                Que vous soyez à Paris, Berlin, New York, Tokyo ou ailleurs, notre équipe travaille sans relâche pour que votre colis vous parvienne rapidement et en parfait état. Avec nos partenaires logistiques de confiance, nous assurons un suivi précis à chaque étape du processus, pour votre tranquillité d'esprit.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2 col-3">
+                            <div class="p-xl-5 p-lg-3 mb-3 mb-lg-0">
+                                <!-- avatar -->
+                                <img src=" {{asset('logo-pays/france.jpg')}}" alt="avatar" class="imgtooltip img-fluid rounded-circle" data-template="one">
+                                <!-- text -->
+                                <div id="one" class="d-none">
+                                    <div class="mb-0 fw-semibold">France</div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-3">
+                            <div class="p-xl-5 p-lg-3 mb-3 mb-lg-0">
+                                <!-- avatar -->
+                                <img src="{{asset('logo-pays/ci.png')}}" alt="avatar" class="imgtooltip img-fluid rounded-circle" data-template="two">
+                                <!-- text -->
+                                <div id="two" class="d-none">
+                                    <div class="mb-0 fw-semibold">Cote d'ivoire </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-3">
+                            <div class="p-xl-5 p-lg-3 mb-3 mb-lg-0">
+                                <!-- avatar -->
+                                <img src="{{asset('logo-pays/canada.avif')}}" alt="avatar" class="imgtooltip img-fluid rounded-circle" data-template="three">
+                                <!-- text -->
+                                <div id="three" class="d-none">
+                                    <div class="mb-0 fw-semibold">CANADA</div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-3">
+                            <div class="p-xl-5 p-lg-3 mb-3 mb-lg-0">
+                                <!-- avatar -->
+                                <img src="../assets/images/avatar/avatar-4.jpg" alt="avatar" class="imgtooltip img-fluid rounded-circle" data-template="four">
+                                <!-- text -->
+                                <div id="four" class="d-none">
+                                    <div class="mb-0 fw-semibold">Mary Holler</div>
+                                    <span>Sales</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-3">
+                            <div class="p-xl-5 p-lg-3 mb-3 mb-lg-0">
+                                <!-- avatar -->
+                                <img src="../assets/images/avatar/avatar-5.jpg" alt="avatar" class="imgtooltip img-fluid rounded-circle" data-template="five">
+                                <!-- text -->
+                                <div id="five" class="d-none">
+                                    <div class="mb-0 fw-semibold">Gilbert Farr</div>
+                                    <span>Oprator</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-3">
+                            <div class="p-xl-5 p-lg-3 mb-3 mb-lg-0">
+                                <!-- avatar -->
+                                <img src="../assets/images/avatar/avatar-6.jpg" alt="avatar" class="imgtooltip img-fluid rounded-circle" data-template="six">
+                                <!-- text -->
+                                <div id="six" class="d-none">
+                                    <div class="mb-0 fw-semibold">Charlie Holland</div>
+                                    <span>Designer</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-3">
+                            <div class="p-xl-5 p-lg-3 mb-3 mb-lg-0">
+                                <!-- avatar -->
+                                <img src="../assets/images/avatar/avatar-7.jpg" alt="avatar" class="imgtooltip img-fluid rounded-circle" data-template="seven">
+                                <!-- text -->
+                                <div id="seven" class="d-none">
+                                    <div class="mb-0 fw-semibold">James Butler</div>
+                                    <span>Developer</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-3">
+                            <div class="p-xl-5 p-lg-3 mb-3 mb-lg-0">
+                                <!-- avatar -->
+                                <img src="../assets/images/avatar/avatar-8.jpg" alt="avatar" class="imgtooltip img-fluid rounded-circle" data-template="eight">
+                                <!-- text -->
+                                <div id="eight" class="d-none">
+                                    <div class="mb-0 fw-semibold">Richard Lane</div>
+                                    <span>Insight</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-3">
+                            <div class="p-xl-5 p-lg-3 mb-3 mb-lg-0">
+                                <!-- avatar -->
+                                <img src="../assets/images/avatar/avatar-9.jpg" alt="avatar" class="imgtooltip img-fluid rounded-circle" data-template="eleven">
+                                <!-- text -->
+                                <div id="eleven" class="d-none">
+                                    <div class="mb-0 fw-semibold">Gail Lanier</div>
+                                    <span>Seo</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-3">
+                            <div class="p-xl-5 p-lg-3 mb-3 mb-lg-0">
+                                <!-- avatar -->
+                                <img src="../assets/images/avatar/avatar-10.jpg" alt="avatar" class="imgtooltip img-fluid rounded-circle" data-template="twelve">
+                                <!-- text -->
+                                <div id="twelve" class="d-none">
+                                    <div class="mb-0 fw-semibold">Mary Holler</div>
+                                    <span>Content</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-3">
+                            <div class="p-xl-5 p-lg-3 mb-3 mb-lg-0">
+                                <!-- avatar -->
+                                <img src="../assets/images/avatar/avatar-11.jpg" alt="avatar" class="imgtooltip img-fluid rounded-circle" data-template="thirteen">
+                                <!-- text -->
+                                <div id="thirteen" class="d-none">
+                                    <div class="mb-0 fw-semibold">Gilbert Farr</div>
+                                    <span>Designer</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-3">
+                            <div class="p-xl-5 p-lg-3 mb-3 mb-lg-0">
+                                <!-- avatar -->
+                                <img src="../assets/images/avatar/avatar-12.jpg" alt="avatar" class="imgtooltip img-fluid rounded-circle" data-template="fourteen">
+                                <!-- text -->
+                                <div id="fourteen" class="d-none">
+                                    <div class="mb-0 fw-semibold">James Butler</div>
+                                    <span>Developer</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

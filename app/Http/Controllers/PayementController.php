@@ -12,10 +12,7 @@ class PayementController extends Controller
      */
     public function initialisePayment(Request $request)
     {
-
-        dd($request->all());
         $codeLivraison = "VTP-LIVRAISON/". $request->code;
-
         $data = array(
             'merchantId' => "PP-F2197",
             'amount' => $request->amount * 650,
@@ -32,8 +29,6 @@ class PayementController extends Controller
             'returnContext' => '',
         );
         $data = json_encode($data);
-
-
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, "https://www.paiementpro.net/webservice/onlinepayment/init/curl-init.php");
         curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json; charset=utf-8'));

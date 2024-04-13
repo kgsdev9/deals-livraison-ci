@@ -64,22 +64,18 @@
                     </table>
                 </div>
             </div>
-            @if($livraison->status == "validee")
+            @if($livraison->paymentstatus == "effectue")
             <div class="card mt-4">
                 <div class="card-body">
                     <div class="d-md-flex justify-content-between align-items-center mb-5">
                         <div>
-                            <!-- text -->
-                            <h4 class="mb-3 mb-md-0">Evolution de(s) colis </h4>
+                            <h4 class="mb-3 mb-md-0">Evolution de(s) de la livraison  </h4>
                         </div>
                         <div>
-                            <!-- button -->
-                            <a href="#" class="btn btn-light-primary btn-sm text-primary">Change Address</a>
-                            <a href="#" class="btn btn-light-danger btn-sm text-danger ms-2">Cancel Order</a>
+                            <a href="#" class="btn btn-light-success btn-sm text-white">Paiement effctué avec succes</a>
                         </div>
                     </div>
                     <div>
-                        <!-- List group -->
                         <ul class="list-group list-group-flush list-timeline-activity">
                             <li class="list-group-item px-0 pt-0 border-0 mb-4">
                                 <div class="row">
@@ -91,48 +87,12 @@
                                     </div>
                                     <!-- col -->
                                     <div class="col ms-n2 mt-1">
-                                        <h4 class="mb-3">Order Placed</h4>
-                                        <h5 class="mb-0">An order has been placed.</h5>
-                                        <span class="fs-6">Wed, 15 April 2022 at 4:30 pm</span>
+                                        <h4 class="mb-3">Date de la transaction </h4>
+                                        <h5 class="mb-0">Code de suivi {{$livraison->code_livraison}} .</h5>
+                                        <span class="fs-6">{{$livraison->created_at}}</span>
                                     </div>
                                 </div>
                             </li>
-                            <!-- List group -->
-                            <li class="list-group-item px-0 pt-0 border-0 mb-4">
-                                <div class="row">
-                                    <!-- col -->
-                                    <div class="col-auto">
-                                        <div class="icon-shape icon-md rounded-circle bg-primary text-white position-relative z-1">
-                                            <i class="fe fe-shopping-bag"></i>
-                                        </div>
-                                    </div>
-                                    <!-- col -->
-                                    <div class="col ms-n2 mt-1">
-                                        <h4 class="mb-3">Packed Thu, 16 April 2022</h4>
-                                        <h5 class="mb-0">Your Item has been picked up by courier patner</h5>
-                                        <span class="fs-6">Wed, 15 April 2022 at 4:30 pm</span>
-                                    </div>
-                                </div>
-                            </li>
-                            <!-- List group -->
-                            <li class="list-group-item px-0 pt-0 border-0 mb-4">
-                                <div class="row">
-                                    <!-- col -->
-                                    <div class="col-auto">
-                                        <div class="icon-shape icon-md rounded-circle bg-primary text-white position-relative z-1">
-                                            <i class="fe fe-box"></i>
-                                        </div>
-                                    </div>
-                                    <!-- col -->
-                                    <div class="col ms-n2 mt-1">
-                                        <h4 class="mb-3">Shipping Thu, 16 April 2022</h4>
-                                        <h5 class="mb-1">BlueDart Logistics GEEK3214566</h5>
-                                        <h5 class="mb-1">Your item has been shipped.</h5>
-                                        <span class="fs-6">Thu, 16 April 2022 at 5:00 pm</span>
-                                    </div>
-                                </div>
-                            </li>
-                            <!-- List group -->
                             <li class="list-group-item px-0 pt-0 border-0">
                                 <div class="row">
                                     <!-- col -->
@@ -143,13 +103,12 @@
                                     </div>
                                     <!-- col -->
                                     <div class="col ms-n2 mt-1">
-                                        <h4 class="mb-0">Delivered</h4>
-                                        <h5 class="mb-1">Order has been successfully delivered</h5>
-                                        <span class="fs-6">Thu, 17 April 2022 at 9:50am</span>
+                                        <h4 class="mb-3">Statut de la livraison </h4>
+                                        <h5 class="mb-0">Votre livraison est en {{$livraison->status}} </h5>
+                                      
                                     </div>
                                 </div>
                             </li>
-                            <!-- List group -->
                         </ul>
                     </div>
                 </div>
@@ -160,16 +119,9 @@
             <a href="{{route('delivery.destroy', $livraison->id)}}" class="btn btn-outline-danger btn-sm">Annuler complementement  </a> &nbsp;
             @endif
             @if($livraison->paymentstatus == "encours")
-            <form class="row d-inline-flex justify-content-center justify-content-lg-start needs-validation g-3" method="POST" action="{{route('initialise.payment')}}">
-                @csrf
-                <input type="hidden" value="{{$total+0.5}}" name="amount" id="amount">
-                <input type="hidden" value="{{$livraison->nom}}" name="nom" id="nom">
-                <input type="hidden" value="{{$livraison->prenom}}" name="prenom" id="prenom">
-                <input type="hidden" value="{{$livraison->telephone}}" name="telephone" id="telephone">
-                <input type="hidden" value="{{$livraison->code_livraison}}" name="code" id="code">
-                <button type="submit" class="btn btn-outline-success btn-sm">Proceder au réglement </button>
-            </form>
+                <button type="submit" class="btn btn-outline-success btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal">Proceder au réglement </button>
             @else
+            <br>
             <a href="#" class="btn btn-primary btn-sm">Paiement effectuté avec succes</a>
             @endif
         </div>
@@ -231,6 +183,7 @@
         </div>
       </div>
     @endif
+     @include('form.formpaymentmethode')
 </div>
 
 @endsection

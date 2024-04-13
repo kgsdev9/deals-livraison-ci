@@ -47,10 +47,9 @@
 					<div class="collapse navbar-collapse" id="navbar-default">
 						<ul class="navbar-nav ms-auto">
 							<li class="nav-item"><a class="nav-link" href="{{route('home')}}">Accueil</a></li>
-							<li class="nav-item"><a class="nav-link" href="#" >Témoignages</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#" >A propos</a></li>
-                            <li class="nav-item"><a class="nav-link" href="https://vtp-market.com/" target="_blank">VTP MARKET </a></li>
-							<li class="nav-item"><a class="nav-link" href="#">Conctact</a></li>
+							<li class="nav-item"><a class="nav-link" href="#">Départs Imminents </a></li>
+                            <li class="nav-item"><a class="nav-link" href="#" >Notre équipe</a></li>
+							<li class="nav-item"><a class="nav-link" href="#">Nos partenaires</a></li>
 						</ul>
 					</div>
 				</div>
@@ -62,13 +61,16 @@
 					<div class="row align-items-center g-0 border-top py-2 mt-6">
 						<!-- Desc -->
 						<div class="col-lg-4 col-md-5 col-12">
-							<span>©<span id="copyright2"><script>                            document.getElementById("copyright2").appendChild(document.createTextNode(new Date().getFullYear()));                        </script></span>Livraison garantie avec vtp livraison </span>
+							<span>©<span id="copyright2">
+                                <script> document.getElementById("copyright2").appendChild(document.createTextNode(new Date().getFullYear()));
+                                </script>
+                            </span><a href="http://kgsinformatique.tech/" class="text-dark" target="_blank">UNE CONCEPTION DE KGS INFORMATIQUE</a></span>
 						</div>
 						<!-- Links -->
 						<div class="col-12 col-md-7 col-lg-8 d-md-flex justify-content-end">
 							<nav class="nav nav-footer">
-								<a class="nav-link ps-0" href="#">VTP GROUP </a>
-								<a class="nav-link px-2 px-md-3" href="{{route('create.delivery')}}">Déposer une  livraison</a>
+								<a class="nav-link ps-0" href="#">DEPOSER UNE LIVRAISON </a>
+								<a class="nav-link px-2 px-md-3" href="{{route('create.delivery')}}">DEPARTS IMMINENTS</a>
 								<a class="nav-link" href="#">FAQ</a>
 							</nav>
 						</div>
