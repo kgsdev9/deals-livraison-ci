@@ -12,17 +12,21 @@ class PayementController extends Controller
      */
     public function initialisePayment(Request $request)
     {
+
+        dd($request->all());
+        $codeLivraison = "VTP-LIVRAISON/". $request->code;
+
         $data = array(
             'merchantId' => "PP-F2197",
             'amount' => $request->amount * 650,
-            'description' => 'code de livraison',
+            'description' => $codeLivraison,
             'channel' => $request->paymentmethod ,
             'countryCurrencyCode' => "952",
             'referenceNumber' => "REF-".time(),
             'customerEmail' => Auth::user()->email,
-            'customerFirstName' => Auth::user()->name,
-            'customerLastname' => Auth::user()->name,
-            'customerPhoneNumber' => Auth::user()->telephone,
+            'customerFirstName' =>$request->nom,
+            'customerLastname' => $request->prenom,
+            'customerPhoneNumber' => $request->telephone,
             'notificationURL' => route('payment.sucess'),
             'returnURL' => route('failled.payment'),
             'returnContext' => '',
@@ -49,12 +53,12 @@ class PayementController extends Controller
 
     public function successpayment()
     {
-
+        return view('payment.success');
     }
 
     public function failledpayment()
     {
-
+        return view('payment.failled');
     }
 
 

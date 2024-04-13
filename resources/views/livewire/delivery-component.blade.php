@@ -11,18 +11,23 @@
                             </div>
                             <div class="card-body">
                                 <div class="row g-3">
-                                    <div class="col-12 col-md-6">
+                                    <div class="col-12 col-md-4">
                                         <label class="form-label" for="fname">Nom du destinataire</label>
-                                        <input type="text" id="nom_destinataire" class="form-control" placeholder="Guy" required="">
+                                        <input type="text" wire:model="nom_destinataire" id="nom_destinataire" class="form-control" placeholder="Guy" required="">
                                     </div>
 
-                                    <div class="col-12 col-md-6">
+                                    <div class="col-12 col-md-4">
                                         <label class="form-label" for="lname">Prénom du destinataire</label>
-                                        <input type="text" id="prenom_destinataire" class="form-control" placeholder="Stephane" required="">
+                                        <input type="text" id="prenom_destinataire" wire:model="prenom_destinataire" class="form-control" placeholder="Stephane" required="">
+                                    </div>
+
+                                    <div class="col-12 col-md-4">
+                                        <label class="form-label" for="lname">Télephone destinataire</label>
+                                        <input type="text" id="prenom_destinataire" wire:model="telephone" class="form-control" placeholder="+3300998898" required="">
                                     </div>
                                     <div class="col-12 col-md-6">
-                                        <label class="form-label" for="courseState">Selectionner un pays </label>
-                                        <select class="form-select" wire:model="country_id" required="">
+                                        <label class="form-label" for="country_id">Selectionner le pays de destination </label>
+                                        <select class="form-select" wire:model="country_id" id="country_id" required="">
                                             <option value="">Choisir </option>
                                             @foreach ($allCountries as $country)
                                            <option value="{{$country->id}}">{{$country->libelle}}</option>
@@ -30,14 +35,22 @@
                                         </select>
                                     </div>
                                     <div class="col-12 col-md-6">
-                                        <label class="form-label" for="courseCountry">Selectionner une ville </label>
-                                        <select class="form-select" wire:model="city_id" required="">
+                                        <label class="form-label" for="city_id">Selectionner la vile de destination </label>
+                                        <select class="form-select" wire:model="city_id" id="city_id" required="">
                                            <option value="">Choisir </option>
                                             @foreach ($allCities as $city)
                                             <option value="{{$city->id}}">{{$city->libelle}}</option>
                                             @endforeach
                                          </select>
                                     </div>
+
+
+                                    <div class="col-12 col-md-12">
+                                        <label class="form-label" for="adresse"> Adresse du destinataire</label>
+                                        <textarea name="" wire:model="adresse" id="adresse" cols="30" rows="1" class="form-control"></textarea>
+                                    </div>
+
+
                                     <br>
                                     <div class="col-12">
                                             <h5>Renseigner les produits</h5>
@@ -51,15 +64,13 @@
 
 
                                                 <div class="col-12 col-md-3">
-                                                    <label class="form-label" for="courseState">Selectionner un pays </label>
-                                                    <select  wire:model="resetprice"  class="form-select"  wire:change="changeEvent($event.target.value)">
+                                                    <label class="form-label" for="courseState">Selectionner le poids </label>
+                                                    <select  wire:model="poidscolis"  class="form-select"  wire:change="changeEvent($event.target.value)">
                                                         <option value="">Selectionner le poids du colis  </option>
                                                         @foreach ($alldeleveryprice as $pricedelivery)
                                                             <option value="{{$pricedelivery->id}}">{{$pricedelivery->poids}}</option>
                                                         @endforeach
                                                     </select>
-
-
                                                 </div>
 
                                                 <div class="col-12 col-md-2">
@@ -68,7 +79,6 @@
                                                     </label>
                                                     <input type="number" value="{{$pu}}" readonly class="form-control">
                                                 </div>
-
                                                 <div class="col-12 col-md-3">
                                                     <label class="form-label" for="courseCountry">Ajouter plusieurs Article </label>
                                                         <button class="btn btn-primary" type="button" wire:click="saveProducts()"> <i class="fe fe-plus"></i> Ajouter</button>

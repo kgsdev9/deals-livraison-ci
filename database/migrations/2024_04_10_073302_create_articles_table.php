@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('designation');
             $table->unsignedBigInteger('livraison_id');
             $table->integer('pu');
-            $table->integer('poids');
+            $table->string('poids');
             $table->foreign('livraison_id')->references('id')->on('livraisons')->onDelete('CASCADE');
             $table->timestamps();
         });

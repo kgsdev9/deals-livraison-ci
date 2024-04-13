@@ -1,4 +1,5 @@
 @extends('master.master')
+@section('title', 'Proceder au paiement')
 @section('master')
 <section class="container d-flex flex-column vh-50">
 
@@ -97,6 +98,10 @@
                     <td colspan="1" class="border-top py-1 fw-bold">Total</td>
                     <td class="border-top py-1 fw-bold">{{ $total + 0.5}}</td>
                     <input type="hidden" value="{{$total}}" name="amount" id="amount">
+                    <input type="hidden" value="{{$delivery->nom}}" name="nom" id="nom">
+                    <input type="hidden" value="{{$delivery->prenom}}" name="prenom" id="prenom">
+                    <input type="hidden" value="{{$delivery->telephone}}" name="telephone" id="telephone">
+                    <input type="hidden" value="{{$delivery->code_livraison}}" name="code" id="code">
                 </tr>
             </tfoot>
         </table>

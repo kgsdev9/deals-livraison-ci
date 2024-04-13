@@ -24,7 +24,8 @@
                                         <!-- card body -->
                                         <div class="p-md-2 p-4">
                                             <!-- form -->
-                                            <form class="row g-1">
+                                            <form class="row g-1" method="POST" action="{{route('delivery.verify')}}">
+                                                @csrf
                                                 <div class="col-12 col-md-5">
                                                     <!-- input -->
                                                     <div class="input-group mb-2 mb-md-0 border-md-0 border rounded-pill">
@@ -39,9 +40,9 @@
                                                         <input
                                                             type="search"
                                                             class="form-control rounded-pill border-0 ps-3 form-focus-none"
-                                                            placeholder="Livraison"
-                                                            aria-label="Livraison"
-                                                            aria-describedby="searchJob">
+                                                            placeholder="Code de livraison"
+                                                            aria-label="Code de livraison"
+                                                            aria-describedby="Rechercher une livraisn" name="code">
                                                     </div>
                                                 </div>
                                                 <div class="col-12 col-md-4">
@@ -56,17 +57,13 @@
                                         </div>
                                     </div>
 
-                                    <!-- text -->
-                                    <span class="fs-4">Avec dely vous avez la possbilité de contacter le livreur via  Whattssap.</span>
+                                    <span class="fs-4">Renseigner votre code de livraison pour  voir le statut de votre livraison .</span>
                                 </div>
                             </div>
                         </div>
                         <div class="offset-lg-1 col-lg-5 col-12 text-center">
                             <div class="position-relative d-none d-lg-block">
                                 <img src="{{asset('livreur01.png')}}" class="img-fluid" alt="img">
-
-
-
                             </div>
                         </div>
                     </div>

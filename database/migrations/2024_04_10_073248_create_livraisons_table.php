@@ -16,7 +16,8 @@ return new class extends Migration
             $table->string('code_livraison')->unique();
             $table->string('nom');
             $table->string('prenom');
-            $table->dateTime('date_livraison');
+            $table->string('telephone');
+            $table->date('date_livraison');
             $table->text('adresse');
             $table->enum('status', ['encours', 'echec', 'livree']);
             $table->enum('paymentstatus', ['encours', 'echec', 'effectue']);

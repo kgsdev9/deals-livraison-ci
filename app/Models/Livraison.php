@@ -14,13 +14,15 @@ class Livraison extends Model
         'prenom',
         'paymentstatus',
         'code_livraison',
-        'date_livraison	',
+        'telephone',
+        'date_livraison',
         'adresse',
         'user_id',
         'country_id',
         'city_id',
         'status'
     ];
+
 
     public function city()  {
         return $this->belongsTo(City::class, 'city_id');

@@ -12,7 +12,6 @@ use Illuminate\Support\Facades\Auth;
 
 class DeliveryComponent extends Component
 {
-
     public $designation;
     public $pu;
     public $poids= "";
@@ -20,13 +19,18 @@ class DeliveryComponent extends Component
     public $city_id = "";
     public $price_livraison= "";
     public $resetprice = "";
-
-
+    public $nom_destinataire ;
+    public $prenom_destinataire ;
+    public $telephone ;
+    public $adresse;
 
     protected $rules = [
         'city_id' => 'required',
-        'country_id' => 'required'
+        'country_id' => 'required',
+        'nom_destinataire' => 'required',
+        'prenom_destinataire'  => 'required'
     ];
+
 
     public $tableau = [];
 
@@ -62,11 +66,14 @@ class DeliveryComponent extends Component
     public function saveLivraison()
     {
         $this->validate();
-        
+
         $livraison =   Livraison::create([
             'code_livraison'=> rand(1000, 2000),
             'date_livraison'=> now(),
-            'adresse' => 'deux plateaux',
+            'nom' => $this->nom_destinataire,
+            'prenom' => $this->prenom_destinataire,
+            'adresse' => $this->adresse,
+            'telephone' =>  $this->telephone,
             'user_id' => Auth::user()->id,
             'country_id' => $this->country_id,
             'city_id' => $this->city_id,
@@ -86,7 +93,6 @@ class DeliveryComponent extends Component
 
     public function render()
     {
-
         return view('livewire.delivery-component', [
             'alldeleveryprice' => PrixLivraison::all(),
             'listeproducts' => $this->tableau,

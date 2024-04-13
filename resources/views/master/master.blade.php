@@ -27,12 +27,12 @@
 					VTP
 					<div class="d-flex align-items-center order-lg-3 ms-lg-3">
 						<div class="d-flex align-items-center">
-							<a href="{{route('create.delivery')}}" class="btn btn-warning d-md-block"> <i class="fe fe-plus"></i> Déposer une livraison</a>
+							<a href="{{route('create.delivery')}}" class="btn btn-warning d-md-block"> <i class="fe fe-plus"></i> Déposer</a>
                             &nbsp;
                             @guest
                             <a href="{{route('login')}}" class="btn btn-outline-secondary d-md-block"> <i class="fe fe-user"></i>Connexion</a>
                              @else
-                             <a href="{{route('dashboard')}}" class="btn btn-outline-secondary d-md-block"> <i class="fe fe-user"></i> Mon Compte</a>
+                             <a href="{{route('dashboard')}}" class="btn btn-outline-secondary d-md-block"> <i class="fe fe-user"></i></a>
                             @endguest
 
 						</div>

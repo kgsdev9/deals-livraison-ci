@@ -66,8 +66,36 @@ class DeliveryController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function remove(string $id)
     {
-        //
+           $livraison = Livraison::find($id);
+
+           if(!is_null($livraison) && !empty($livraison))
+           {
+                $listarticleliveaison = Article::where('livraison_id', $livraison->id)->get();
+
+                if(!is_null($listarticleliveaison) && !empty($listarticleliveaison))
+                {
+                   $livraison->delete();
+                   foreach($listarticleliveaison as $vlistarticleliveaison)
+                   {
+                    $vlistarticleliveaison->delete();
+                   }
+
+                   if(route('delivery.verify'))
+                   {
+                    return redirect()->route('home');
+                   } else
+                   {
+                    return redirect()->back();
+                   }
+                } else
+                {
+                    abort(404);
+                }
+           } else
+           {
+            abort(404);
+           }
     }
 }

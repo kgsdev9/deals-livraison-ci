@@ -6,6 +6,7 @@ use App\Http\Controllers\Home\HomeController;
 use App\Http\Controllers\Livreurs\RegisterController;
 use App\Http\Controllers\NotificationController;
 use App\Http\Controllers\PayementController;
+use App\Http\Controllers\SuiviLivraison;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -33,4 +34,7 @@ Route::post('/initialise-payment-Auth-=1', [PayementController::class, 'initiali
 Route::get('/paymentsucces', [PayementController::class, 'successpayment'])->name('payment.sucess');
 Route::get('/paymentfailled', [PayementController::class, 'failledpayment'])->name('failled.payment');
 Route::get('gestion-users', UserController::class)->name('users.index');
+Route::post('verified-status-delivery', [SuiviLivraison::class, 'verified'])->name('delivery.verify');
+Route::get('verified-status-response/{response}', [SuiviLivraison::class, 'response'])->name('delivery.response');
+Route::get('delete-payment/{id}', [DeliveryController::class, 'remove'])->name('delivery.destroy');
 Auth::routes();
