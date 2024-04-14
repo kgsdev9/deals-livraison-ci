@@ -5,3 +5,20 @@ whattsap icons
 
 
 https://icons.getbootstrap.com/icons/whatsapp/
+
+
+
+
+# - Exporter la liste de toutes les commandes
+# - Reprendre la meme livraison pour avec le date qui change
+# - Mieux designer la vue des factures d'une livraison
+# - Suppression d'une livraison
+# - Gerer les routes de succes et d'echec de paiement
+# - Implementer la fonctionnalites de depart imminents
+# -Liste de tous les utilisateurs
+# - mieux styliser la vue qui permet d'envoyer les notifications aux utlisateurs quand la livraison a été enregistré avec succes
+# - Mieux presenter le rendu PDF de la livraison avec stripo
+# Gerer les vues de succes et d'echec de paiement (belle vue)
+# - Créer la page de notre equipe, nos partenaires, departs immminents
+# -Gerer les vues d'authentification qui ne marche pas et qui n'ont pas été bien faites
+# - Gerer l'authnetification avec google pour se connecter 

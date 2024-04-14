@@ -3,13 +3,15 @@
 namespace App\Livewire;
 
 use App\Models\City;
+use App\Models\User;
 use App\Models\Article;
 use App\Models\Country;
-use App\Models\ImageLivraison;
 use Livewire\Component;
 use App\Models\Livraison;
 use App\Models\PrixLivraison;
+use App\Models\ImageLivraison;
 use Illuminate\Support\Facades\Auth;
+use App\Notifications\RegisterNewLivraison;
 use Livewire\Features\SupportFileUploads\WithFileUploads;
 
 class DeliveryComponent extends Component
@@ -103,6 +105,11 @@ class DeliveryComponent extends Component
                 'poids' => $varticle['poids'],
             ]);
         }
+
+        // $this->notify((new RegisterNewLivraison()));
+
+        User::find(Auth::user()->id)->notify(new RegisterNewLivraison());
+
         return redirect()->to('/delivery/show/'. $livraison->id);
     }
 

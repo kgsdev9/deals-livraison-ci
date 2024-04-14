@@ -22,7 +22,16 @@ class DashboardController extends Controller
 
     public function index()
     {
-        $livraison  = Livraison::where('user_id', Auth::user()->id)->count();
+        $livraison  = "";
+
+        //dd(Auth::user()->role->libelle == "admin");
+        if(Auth::user()->role->libelle == "user") {
+           $livraison =Livraison::where('user_id', Auth::user()->id)->count();
+        } else
+        {
+            $livraison =Livraison::count();
+        }
+
         $deliveryImage = ImageLivraison::where('livraison_id', $livraison)->get();
         $alllivraisons  = Livraison::count();
         $listepricelivraisons  = PrixLivraison::count();

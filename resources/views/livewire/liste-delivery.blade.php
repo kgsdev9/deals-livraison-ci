@@ -32,8 +32,7 @@
                                 <div class="dropdown-menu" aria-labelledby="dropdownProjectOne">
                                     <span class="dropdown-header">Action</span>
 
-
-                                    <a class="dropdown-item" href="#">
+                                    <a class="dropdown-item" href="{{route('delivery.invoice',$liste->id)}}">
                                         <i class="fe fe-printer dropdown-item-icon"></i>
                                        Imprimer
                                     </a>

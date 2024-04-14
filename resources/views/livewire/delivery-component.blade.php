@@ -125,7 +125,10 @@
                                                     </tbody>
                                                   </table>
 
-                                                  <button class="btn btn-outline-dark" wire:click="saveLivraison()">Enregister la livraison </button>
+                                                  <button class="btn btn-outline-dark" wire:click="saveLivraison()" wire:loading.attr="disabled">Enregister la livraison </button>
+                                                  <div wire:loading>
+                                                    <h4>Patientez votre livraison est en cours de traitement</h4>
+                                                </div>
                                             </div>
                                     </div>
                                 </div>

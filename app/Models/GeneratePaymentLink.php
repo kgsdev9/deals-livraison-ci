@@ -8,8 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class GeneratePaymentLink extends Model
 {
     use HasFactory;
+    protected $fillable  = ['designation', 'prix', 'lien' , 'nom', 'prenom', 'email', 'motif'];
 
-    protected $fillable  = ['designation', 'prix', 'lien' , 'nom', 'prenom', 'email'];
-
-    
 }

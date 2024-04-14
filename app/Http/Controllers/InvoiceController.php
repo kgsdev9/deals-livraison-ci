@@ -2,63 +2,28 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Article;
+use App\Models\Livraison;
 use Illuminate\Http\Request;
+use App\Models\ImageLivraison;
+use Barryvdh\DomPDF\Facade\Pdf;
 
 class InvoiceController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function invoicedelivery($id)
     {
-        //
+        $delivery = Livraison::find($id);
+        $listeimagedelivery =  ImageLivraison::where('livraison_id', $delivery->id)->get();
+        $lisearticle = Article::where('livraison_id', $delivery->id)->get();
+        $pdf = Pdf::loadView('print.livraison.deliveryprint', [
+            'delivery'=> $delivery,
+            'listeimagedelivery'=> $listeimagedelivery,
+            'lisearticle' => $lisearticle
+        ])->setPaper('a4', 'landscape');
+        return $pdf->download('livraison.pdf');
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(string $id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(string $id)
-    {
-        //
-    }
 }
