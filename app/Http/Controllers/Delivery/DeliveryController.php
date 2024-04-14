@@ -6,6 +6,7 @@ use App\Models\Article;
 use App\Models\Livraison;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Models\ImageLivraison;
 
 class DeliveryController extends Controller
 {
@@ -17,8 +18,10 @@ class DeliveryController extends Controller
 
     public function show($id) {
         $delivery = Livraison::find($id);
+       $listeimagedelivery =  ImageLivraison::where('livraison_id', $delivery->id)->get();
+
         $lisearticle = Article::where('livraison_id', $delivery->id)->get();
-        return view('delivery.show', compact('delivery', 'lisearticle'));
+        return view('delivery.show', compact('delivery', 'lisearticle', 'listeimagedelivery'));
     }
 
 

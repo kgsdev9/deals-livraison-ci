@@ -86,8 +86,6 @@
 
             </tbody>
             <tfoot>
-
-
                 <tr class="text-dark">
                     <td colspan="2"></td>
                     <td colspan="1" class="pt-0">Taxe </td>
@@ -97,15 +95,29 @@
                     <td colspan="2"></td>
                     <td colspan="1" class="border-top py-1 fw-bold">Total</td>
                     <td class="border-top py-1 fw-bold">{{ $total + 0.5}}</td>
+
                     <input type="hidden" value="{{$total}}" name="amount" id="amount">
                     <input type="hidden" value="{{$delivery->nom}}" name="nom" id="nom">
                     <input type="hidden" value="{{$delivery->prenom}}" name="prenom" id="prenom">
                     <input type="hidden" value="{{$delivery->telephone}}" name="telephone" id="telephone">
                     <input type="hidden" value="{{$delivery->code_livraison}}" name="code" id="code">
+
                 </tr>
             </tfoot>
         </table>
 
+        <div class="container mt-4">
+            <div class="row">
+                @foreach ($listeimagedelivery as $vliste)
+              <div class="col-sm">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="{{asset('cloudinary/'.$vliste->image)}}" alt="Card image cap">
+
+                  </div>
+              </div>
+              @endforeach
+            </div>
+          </div>
 
       </div>
     </div>

@@ -89,7 +89,7 @@ class DeliveryComponent extends Component
         {
             $imge = $photo->store('delivery');
             ImageLivraison::create([
-                        'image' =>$photo,
+                        'image' =>$imge,
                         'livraison_id' => $livraison->id
                     ]);
         }

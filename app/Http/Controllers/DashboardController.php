@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\ImageLivraison;
 use App\Models\User;
 use App\Models\Livraison;
 use App\Models\PrixLivraison;
@@ -22,6 +23,7 @@ class DashboardController extends Controller
     public function index()
     {
         $livraison  = Livraison::where('user_id', Auth::user()->id)->count();
+        $deliveryImage = ImageLivraison::where('livraison_id', $livraison)->get();
         $alllivraisons  = Livraison::count();
         $listepricelivraisons  = PrixLivraison::count();
         $countusers  = User::count();

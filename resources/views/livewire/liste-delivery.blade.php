@@ -39,7 +39,7 @@
                                     </a>
 
                                     <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="#">
+                                    <a class="dropdown-item" href="{{route('show.delivery',$liste->id)}}">
                                         <i class="fe fe-eye"></i>
                                         Visualiser
                                     </a>
@@ -56,37 +56,23 @@
                         <p class="mb-0">{{$liste->adresse}}</p>
                     </div>
                     <div class="d-flex justify-content-between align-items-center mb-5">
-                        <div class="d-flex align-items-center">
-                            <div class="avatar-group">
-                                <!-- avatar -->
-                                <span class="avatar avatar-md">
-                                    <!-- img -->
-                                    <img alt="avatar" src="../../assets/images/avatar/avatar-1.jpg" class="rounded-circle imgtooltip" data-template="one ">
-                                    <span id="one" class="d-none">
-                                        <small class="fw-semibold">Paul Haney</small>
-                                    </span>
-                                </span>
-                                <!-- avatar -->
-                            </div>
-                        </div>
-                        <!-- text -->
                         <div>
                             @if($liste->status == "encours")
-                            <span class="badge bg-info-soft">En cours</span>
+                           Statut de la livraison <span class="badge bg-info-soft">En cours</span>
                             @elseif($liste->status == "echec")
                             <span class="badge bg-danger-soft">Echec</span>
                             @elseif($liste->status == "livree")
-                            <span class="badge bg-success-soft">Effectuée</span>
+                            Statut de la livraison <span class="badge bg-success-soft">Effectuée</span>
                             @endif
                         </div>
                     </div>
                     <div>
-                        <!-- progress bar -->
-                        <div class="progress progress-tooltip" style="height: 6px">
+
+                        {{-- <div class="progress progress-tooltip" style="height: 6px">
                             <div class="progress-bar bg-info" role="progressbar" style="width: 45%" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100">
                                 <span>45%</span>
                             </div>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
                 <!-- card footer -->
