@@ -11,5 +11,5 @@ class ImageLivraison extends Model
 
     protected $fillable  = ['image', 'livraison_id'];
 
-    
+
 }

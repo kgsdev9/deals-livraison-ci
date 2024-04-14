@@ -1,5 +1,4 @@
-
-@section('title', 'Créer une nouvelle livraison')
+@section('title', 'Nouvelle livraison')
 <div>
     <section class="py-6">
         <div class="container">
@@ -45,9 +44,26 @@
                                     </div>
 
 
-                                    <div class="col-12 col-md-12">
+                                    <div class="col-12 col-md-6">
                                         <label class="form-label" for="adresse"> Adresse du destinataire</label>
                                         <textarea name="" wire:model="adresse" id="adresse" cols="30" rows="1" class="form-control"></textarea>
+                                    </div>
+
+                                    <div class="col-12 col-md-6">
+                                        <label class="form-label" for="adresse">Selectionner vos images</label>
+                                        <input type="file" multiple class="form-control" wire:model="images" >
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-lg-3">
+                                            @foreach ($images as $image)
+
+                                            <img src="{{ $image->temporaryUrl() }}" alt="image" class="img-fluid rounded-3 w-100" style="height:150px;">
+
+                                            @endforeach
+
+                                        </div>
+
                                     </div>
 
 
@@ -59,7 +75,7 @@
                                                     <label class="form-label" for="phone">
                                                        Désignation
                                                     </label>
-                                                    <input type="text" wire:model.live="designation" class="form-control">
+                                                    <input type="text" wire:model="designation" class="form-control">
                                                 </div>
 
 
@@ -77,7 +93,7 @@
                                                     <label class="form-label" for="phone">
                                                        Prix unitaire (€)
                                                     </label>
-                                                    <input type="number" value="{{$pu}}" readonly class="form-control">
+                                                    <input type="number" value="{{$pu}}"  readonly class="form-control">
                                                 </div>
                                                 <div class="col-12 col-md-3">
                                                     <label class="form-label" for="courseCountry">Ajouter plusieurs Article </label>
@@ -220,7 +236,7 @@
                         </div>
                     </div> --}}
                     <div class="card border-0 mb-3 mb-lg-0">
-                            
+
 
                         <div class="card-body">
                             <h3 class="mb-2">Code de reduction de livraison</h3>
@@ -235,9 +251,5 @@
             </div>
         </div>
     </section>
-
-
-
-
 
 </div>

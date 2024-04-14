@@ -43,51 +43,75 @@
           <h2 class="text-2xl font-semibold mb-1.5">Explorez le monde depuis chez vous avec VTP Livraison Internationale </h2>
           <p class="text-sm text-gray-700 font-normal">Vous n'avez pas de compte alors . <a href="{{route('login')}}" class="text-blue-700" >Connectez-vous!</a></p>
         </div>
-
-
         <!-- form -->
-        <form  method="POST" action="{{ route('login') }}"  class="space-y-7 text-sm text-black font-medium dark:text-white"  uk-scrollspy="target: > *; cls: uk-animation-scale-up; delay: 100 ;repeat: true">
-         @csrf
-          <!-- email -->
-          <div>
-              <label for="email" class="">Adresse email</label>
-              <div class="mt-2.5">
-                  <input   id="email" type="email" name="email" autofocus=""  placeholder="Email" required="" class="!w-full !rounded-lg !bg-transparent !shadow-sm !border-slate-200 dark:!border-slate-800 dark:!bg-white/5">
+        <form method="POST" action="{{ route('register') }}" class="space-y-7 text-sm text-black font-medium dark:text-white uk-scrollspy-inview " uk-scrollspy="target: > *; cls: uk-animation-scale-up; delay: 100 ;repeat: true" style="">
+            @csrf
+            <div class="grid grid-cols-2 gap-4 gap-y-7 uk-scrollspy-inview " style="">
+
+              <!-- first name -->
+              <div class="col-span-2">
+                  <label for="email" class="">Nom d'utilisateur</label>
+                  <div class="mt-2.5">
+                      <input id="name" type="text" name="name" autofocus="" placeholder="VTP-998778" required="" class="!w-full !rounded-lg !bg-transparent !shadow-sm !border-slate-200 dark:!border-slate-800 dark:!bg-white/5" required autocomplete="name" autofocus>
+                  </div>
               </div>
-          </div>
-          <!-- password -->
-          <div>
-            <label for="email" class="">Mot de passe </label>
-            <div class="mt-2.5">
-                <input id="password" name="password" type="password" placeholder="***"  class="!w-full !rounded-lg !bg-transparent !shadow-sm !border-slate-200 dark:!border-slate-800 dark:!bg-white/5">
+
+
+              <!-- email -->
+              <div class="col-span-2">
+                  <label for="email" class="">Email address</label>
+                  <div class="mt-2.5">
+                      <input id="email" name="email" type="email" placeholder="Email" required="" class="!w-full !rounded-lg !bg-transparent !shadow-sm !border-slate-200 dark:!border-slate-800 dark:!bg-white/5">
+                  </div>
+              </div>
+
+              <!-- password -->
+              <div>
+                <label for="email" class="">Password</label>
+                <div class="mt-2.5">
+                    <input id="password" name="password" type="password" placeholder="***" class="!w-full !rounded-lg !bg-transparent !shadow-sm !border-slate-200 dark:!border-slate-800 dark:!bg-white/5">
+                </div>
+              </div>
+
+              <!-- Confirm Password -->
+              <div>
+                  <label for="email" class="">Confirm Password</label>
+                  <div class="mt-2.5">
+                      <input id="password_confirmation" name="password_confirmation" type="password" placeholder="***" class="!w-full !rounded-lg !bg-transparent !shadow-sm !border-slate-200 dark:!border-slate-800 dark:!bg-white/5">
+                  </div>
+              </div>
+
+              <div class="col-span-2">
+
+                <label class="inline-flex items-center" id="rememberme">
+                  <input type="checkbox" id="accept-terms" class="!rounded-md accent-red-800" checked>
+                  <span class="ml-2">Acceptez-vous  <a href="#" class="text-blue-700 hover:underline">les termes et conditions </a> </span>
+                </label>
+
+              </div>
+
+
+              <!-- submit button -->
+              <div class="col-span-2">
+                <button type="submit" class="button bg-primary text-white w-full">Inscription</button>
+              </div>
+
             </div>
-          </div>
 
-          <div class="flex items-center justify-between">
-
-            <div class="flex items-center gap-2.5">
-              <input id="rememberme" name="remember" type="checkbox"  id="remember" {{ old('remember') ? 'checked' : '' }}>
-              <label for="rememberme" class="font-normal">Se souvenir de moi </label>
+            <div class="text-center flex items-center gap-6 uk-scrollspy-inview " style="">
+              <hr class="flex-1 border-slate-200 dark:border-slate-800">
+              Or continue with
+              <hr class="flex-1 border-slate-200 dark:border-slate-800">
             </div>
-            <a href="{{route('password.request')}}" class="text-blue-700">Mot de passé oublié </a>
-          </div>
-          <div>
-            <button type="submit" class="button bg-primary text-white w-full">Connexion</button>
-          </div>
 
-          <div class="text-center flex items-center gap-6">
-            <hr class="flex-1 border-slate-200 dark:border-slate-800">
-            ou  continuer avec
-            <hr class="flex-1 border-slate-200 dark:border-slate-800">
-          </div>
+            <!-- social login -->
+            <div class="flex gap-2 uk-scrollspy-inview " uk-scrollspy="target: > *; cls: uk-animation-scale-up; delay: 400 ;repeat: true" style="">
+              <a href="#" class="button flex-1 flex items-center gap-2 bg-primary text-white text-sm uk-scrollspy-inview " style=""> <ion-icon name="logo-facebook" class="text-lg"></ion-icon> facebook  </a>
+              <a href="#" class="button flex-1 flex items-center gap-2 bg-sky-600 text-white text-sm uk-scrollspy-inview " style=""> <ion-icon name="logo-twitter"></ion-icon> twitter  </a>
+              <a href="#" class="button flex-1 flex items-center gap-2 bg-black text-white text-sm uk-scrollspy-inview " style=""> <ion-icon name="logo-github"></ion-icon> github  </a>
+            </div>
 
-          <!-- social login -->
-          <div class="flex gap-2" uk-scrollspy="target: > *; cls: uk-animation-scale-up; delay: 400 ;repeat: true">
-            <a href="#" class="button flex-1 flex items-center gap-2 bg-primary text-white text-sm"> <ion-icon name="logo-facebook" class="text-lg"></ion-icon> Google  </a>
-
-          </div>
-
-        </form>
+          </form>
 
 
       </div>

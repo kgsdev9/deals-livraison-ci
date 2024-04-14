@@ -6,7 +6,6 @@
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
 		<meta name="KGs informatique" content="kgsinformatique.tech" />
-		<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 		<!-- Libs CSS -->
 		<link rel="stylesheet" href="{{asset('assets/fonts/feather/feather.css')}}">
 		<link rel="stylesheet" href="{{asset('assets/libs/bootstrap-icons/font/bootstrap-icons.min.css')}}">
@@ -93,8 +92,6 @@
 			<script src="../../assets/libs/tippy.js/dist/tippy-bundle.umd.min.js"></script>
 			<script src="../../assets/js/vendors/tooltip.js"></script>
             @livewireScripts
-
-
 		</body>
 
 	</html>

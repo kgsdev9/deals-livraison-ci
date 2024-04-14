@@ -5,14 +5,19 @@ namespace App\Livewire;
 use App\Models\City;
 use App\Models\Article;
 use App\Models\Country;
+use App\Models\ImageLivraison;
 use Livewire\Component;
 use App\Models\Livraison;
 use App\Models\PrixLivraison;
 use Illuminate\Support\Facades\Auth;
+use Livewire\Features\SupportFileUploads\WithFileUploads;
 
 class DeliveryComponent extends Component
 {
-    public $designation;
+
+    use  WithFileUploads;
+
+    public $designation = "";
     public $pu;
     public $poids= "";
     public $country_id= "";
@@ -23,37 +28,37 @@ class DeliveryComponent extends Component
     public $prenom_destinataire ;
     public $telephone ;
     public $adresse;
+    public $poidscolis = "";
+    public $images = [];
+    public $tableau = [];
 
     protected $rules = [
         'city_id' => 'required',
         'country_id' => 'required',
         'nom_destinataire' => 'required',
-        'prenom_destinataire'  => 'required'
+        'prenom_destinataire'  => 'required',
+        'images'  => 'required',
+        'telephone'  => 'required'
     ];
-
-
-    public $tableau = [];
 
     public function changeEvent($id)
     {
         $pricelivraison =   PrixLivraison::where('id', $id)->first();
         $this->pu =  $pricelivraison->prix;
         $this->poids =  $pricelivraison->poids;
-
     }
 
     public function saveProducts()
     {
         $this->tableau[] = ['designation' => $this->designation, 'prix' => $this->pu, 'poids' => $this->poids];
         $this->resetField();
-
     }
 
     public function resetField()
     {
         $this->pu = "";
+        $this->poidscolis = "";
         $this->designation = "";
-        $this->resetprice = "";
 
     }
 
@@ -65,6 +70,7 @@ class DeliveryComponent extends Component
 
     public function saveLivraison()
     {
+
         $this->validate();
 
         $livraison =   Livraison::create([
@@ -78,6 +84,15 @@ class DeliveryComponent extends Component
             'country_id' => $this->country_id,
             'city_id' => $this->city_id,
             ]);
+
+        foreach($this->images as $photo)
+        {
+            $imge = $photo->store('delivery');
+            ImageLivraison::create([
+                        'image' =>$photo,
+                        'livraison_id' => $livraison->id
+                    ]);
+        }
 
         foreach($this->tableau as $varticle)
         {
