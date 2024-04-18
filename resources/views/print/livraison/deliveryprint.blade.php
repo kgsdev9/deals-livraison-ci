@@ -1,11 +1,20 @@
-<h1>ssss</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FACTURE DE LIVRAISON </title>
+</head>
+<body>
+
 <section class="container d-flex flex-column vh-50">
 
     <div class="row align-items-center justify-content-center g-0 h-lg-100 py-8">
       <!-- Docs -->
       <div class="offset-xl-1 col-xl-5 col-lg-6 col-md-12 col-12 text-center text-lg-start">
-        <h1 class="display-3 mb-2 fw-bold">Livraison Enregistré avec sucess.</h1>
-        <p class="mb-4 fs-4">Livraison ajoutée avec succès, procéder au paiement pour confirmer la commande.</p>
+        <h1 class="display-3 mb-2 fw-bold">Facture de Livraison .</h1>
+
 
         <hr class="my-4">
       </div>
@@ -61,7 +70,7 @@
               <div class="col-sm">
                 <div class="card" style="width: 18rem;">
                     <img class="card-img-top" src="{{public_path('cloudinary/'.$vliste->image)}}" alt="Card image cap">
-                  
+
                   </div>
               </div>
               @endforeach
@@ -75,3 +84,6 @@
   </section>
 
 
+
+</body>
+</html>
