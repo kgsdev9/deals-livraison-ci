@@ -68,8 +68,8 @@
 						<!-- Links -->
 						<div class="col-12 col-md-7 col-lg-8 d-md-flex justify-content-end">
 							<nav class="nav nav-footer">
-								<a class="nav-link ps-0" href="#">DEPOSER UNE LIVRAISON </a>
-								<a class="nav-link px-2 px-md-3" href="{{route('create.delivery')}}">DEPARTS IMMINENTS</a>
+								<a class="nav-link ps-0" href="{{route('create.delivery')}}">DEPOSER UNE LIVRAISON </a>
+								<a class="nav-link px-2 px-md-3" href="{{route('depart.index')}}">DEPARTS IMMINENTS</a>
 								<a class="nav-link" href="#">FAQ</a>
 							</nav>
 						</div>

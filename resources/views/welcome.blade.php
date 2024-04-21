@@ -171,7 +171,7 @@
                             <p class="lead px-lg-8 mb-6">Nous sommes fiers de notre dévouement à fournir un service qui dépasse les attentes, à chaque interaction. Notre équipe est non seulement compétente et expérimentée, mais elle est également passionnée par ce qu'elle fait.</p>
                             <!-- button -->
                             <div class="d-grid d-md-block">
-                                <a href="#" class="btn btn-outline-secondary mb-2 mb-md-0">Consulter les départs imminents</a>
+                                <a href="{{route('depart.index')}}" class="btn btn-outline-secondary mb-2 mb-md-0">Consulter les départs imminents</a>
                                 <a href="{{route('create.delivery')}}" class="btn btn-warning">Déposer une livraison</a>
                             </div>
                         </div>
