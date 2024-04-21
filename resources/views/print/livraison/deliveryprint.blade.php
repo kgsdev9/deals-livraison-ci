@@ -14,8 +14,6 @@
       <!-- Docs -->
       <div class="offset-xl-1 col-xl-5 col-lg-6 col-md-12 col-12 text-center text-lg-start">
         <h1 class="display-3 mb-2 fw-bold">Facture de Livraison .</h1>
-
-
         <hr class="my-4">
       </div>
       <!-- img -->

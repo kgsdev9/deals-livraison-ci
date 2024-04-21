@@ -18,5 +18,9 @@ class HomeController extends Controller
         return view('dashboard.gestionlivraison.index');
     }
 
+    public function listeDepart() {
+        return view('departs.liste');
+    }
+
 
 }

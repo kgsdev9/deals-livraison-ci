@@ -46,7 +46,7 @@
 					<div class="collapse navbar-collapse" id="navbar-default">
 						<ul class="navbar-nav ms-auto">
 							<li class="nav-item"><a class="nav-link" href="{{route('home')}}">Accueil</a></li>
-							<li class="nav-item"><a class="nav-link" href="#">Départs Imminents </a></li>
+							<li class="nav-item"><a class="nav-link" href="{{route('depart.index')}}">Départs Imminents </a></li>
                             <li class="nav-item"><a class="nav-link" href="#" >Notre équipe</a></li>
 							<li class="nav-item"><a class="nav-link" href="#">Nos partenaires</a></li>
 						</ul>

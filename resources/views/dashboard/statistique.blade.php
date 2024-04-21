@@ -52,7 +52,7 @@
                 </div>
                 <h2 class="fw-bold mb-1">{{$countusers}}</h2>
 
-                <a href="#" class="btn btn-outline-secondary">Consulter</a>
+                <a href="{{route('gestion.users')}}" class="btn btn-outline-secondary">Consulter</a>
             </div>
         </div>
     </div>

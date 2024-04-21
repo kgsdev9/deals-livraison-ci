@@ -23,6 +23,10 @@ class Livraison extends Model
         'status'
     ];
 
+    public function countLivraisonForCountryCity($cityId, $countryid)
+    {
+        return Livraison::where('city_id', $cityId)->where('country_id', $countryid)->count();
+    }
 
     public function city()  {
         return $this->belongsTo(City::class, 'city_id');

@@ -39,4 +39,6 @@ Route::post('verified-status-delivery', [SuiviLivraison::class, 'verified'])->na
 Route::get('verified-status-response/{response}', [SuiviLivraison::class, 'response'])->name('delivery.response');
 Route::get('delete-payment/{id}', [DeliveryController::class, 'remove'])->name('delivery.destroy');
 Route::get('/delivery/print/{id}', [InvoiceController::class, 'invoicedelivery'])->name('delivery.invoice');
+Route::get('/users', UserController::class)->name('gestion.users');
+Route::get('/depart-imminents', [HomeController::class ,'listeDepart'])->name('depart.index');
 Auth::routes();

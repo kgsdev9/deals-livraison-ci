@@ -20,12 +20,12 @@
                         </nav>
                     </div>
                     <div>
-                        <a href="#" class="btn btn-primary" wire:click="displayform()">Ajouter un nouveau prix </a>
+                        <button type="button" class="btn btn-primary" wire:click="displayFormulaire()">Nouveau User </button>
                     </div>
                 </div>
             </div>
         </div>
-        @if($dispkayform == true)
+        @if($displayform == true)
         <div class="row">
             <div class="col-lg-12 col-md-12 col-12">
                 <!-- Card -->
@@ -47,29 +47,30 @@
                                 <tr>
                                     <th>Nom</th>
                                     <th>email</th>
-                                    <th>telephone</th>
+                                    <th>role</th>
                                     <th>Action</th>
-
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach ($gestionlivraisons as $price)
+                                @foreach ($allUsers as $user)
                                 <tr>
                                     <td>
-                                      {{ $price->poids}}
+                                      {{ $user->name}}
                                     </td>
                                     <td>
-                                        {{ $price->prix}} €
+                                        {{ $user->email}}
                                      </td>
 
                                      <td>
-                                       <button class="btn btn-light" wire:click="edit({{$price->id}})">Editer </button>
+                                        {{ $user->role->libelle}}
+                                     </td>
+                                     <td>
+                                       <button class="btn btn-light" wire:click="edit({{$user->id}})">Editer </button>
                                        <button class="btn btn-danger">Supprimer </button>
                                      </td>
 
                                 </tr>
                                 @endforeach
-
                             </tbody>
                         </table>
                     </div>
@@ -78,9 +79,16 @@
         </div>
         @else
             <div>
-                <input type="text" wire:model="poids" class="form-control">
-                <input type="text" wire:model="prix" class="form-control">
-                @if($pricelivraisonId)
+                <input type="text" wire:model="name" class="form-control" placeholder="nom utilisateur">
+                <input type="email" wire:model="email" class="form-control" placeholder="email@gmail.com">
+                <select wire:model="role_id" class="form-control">
+                    <option value="">Choissisez</option>
+                    @foreach ($allRoles as $role)
+                    <option value="{{$role->id}}">{{$role->libelle}}</option>
+                    @endforeach
+                </select>
+                <input type="password" wire:model="password" class="form-control" placeholder="******">
+                @if($userId)
                 <button wire:click="update()" class="btn btn-outline-dark">Modifier</button>
                 @else
                 <button wire:click="store()" class="btn btn-outline-dark">Enregistrer</button>
