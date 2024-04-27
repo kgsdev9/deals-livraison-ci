@@ -95,27 +95,9 @@
               <div class="col-span-2">
                 <button type="submit" class="button bg-primary text-white w-full">Inscription</button>
               </div>
-
             </div>
-
-            <div class="text-center flex items-center gap-6 uk-scrollspy-inview " style="">
-              <hr class="flex-1 border-slate-200 dark:border-slate-800">
-              Or continue with
-              <hr class="flex-1 border-slate-200 dark:border-slate-800">
-            </div>
-
-            <!-- social login -->
-            <div class="flex gap-2 uk-scrollspy-inview " uk-scrollspy="target: > *; cls: uk-animation-scale-up; delay: 400 ;repeat: true" style="">
-              <a href="#" class="button flex-1 flex items-center gap-2 bg-primary text-white text-sm uk-scrollspy-inview " style=""> <ion-icon name="logo-facebook" class="text-lg"></ion-icon> facebook  </a>
-              <a href="#" class="button flex-1 flex items-center gap-2 bg-sky-600 text-white text-sm uk-scrollspy-inview " style=""> <ion-icon name="logo-twitter"></ion-icon> twitter  </a>
-              <a href="#" class="button flex-1 flex items-center gap-2 bg-black text-white text-sm uk-scrollspy-inview " style=""> <ion-icon name="logo-github"></ion-icon> github  </a>
-            </div>
-
           </form>
-
-
       </div>
-
     </div>
 
     <!-- image slider -->

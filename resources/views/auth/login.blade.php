@@ -74,24 +74,8 @@
           <div>
             <button type="submit" class="button bg-primary text-white w-full">Connexion</button>
           </div>
-
-          <div class="text-center flex items-center gap-6">
-            <hr class="flex-1 border-slate-200 dark:border-slate-800">
-            ou  continuer avec
-            <hr class="flex-1 border-slate-200 dark:border-slate-800">
-          </div>
-
-          <!-- social login -->
-          <div class="flex gap-2" uk-scrollspy="target: > *; cls: uk-animation-scale-up; delay: 400 ;repeat: true">
-            <a href="#" class="button flex-1 flex items-center gap-2 bg-primary text-white text-sm"> <ion-icon name="logo-facebook" class="text-lg"></ion-icon> Google  </a>
-
-          </div>
-
         </form>
-
-
       </div>
-
     </div>
 
     <!-- image slider -->
