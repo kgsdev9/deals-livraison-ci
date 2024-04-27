@@ -61,6 +61,7 @@
                 <tr>
                     <th>Désignation</th>
                     <th>Poids</th>
+                    <th>qte</th>
                     <th>Prix Unitaire</th>
                     <th>Total</th>
                 </tr>
@@ -71,16 +72,16 @@
             <tbody>
                 @foreach ($lisearticle as $article)
                 @php
-                    $total +=$article->pu;
+                    $total +=$article->pu * $article->quantite ;
                 @endphp
                 <tr class="text-dark">
                     <td>
                         {{$article->designation}}
-
                     </td>
                     <td>{{$article->poids}}</td>
-                    <td>{{$article->pu}} €</td>
-                    <td>{{$article->pu}}</td>
+                    <td>{{$article->quantite}}</td>
+                    <td>{{$article->pu}}€</td>
+                    <td>{{$article->pu * $article->quantite }} €</td>
                 </tr>
                 @endforeach
 
@@ -106,23 +107,17 @@
             </tfoot>
         </table>
 
-        <div class="container mt-4">
-            <div class="row">
-                @foreach ($listeimagedelivery as $vliste)
-              <div class="col-sm">
+        <div class="row mt-2">
+            @foreach ($listeimagedelivery as $vliste)
+            <div class="col-md-4">
                 <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="{{asset('cloudinary/'.$vliste->image)}}" alt="Card image cap">
-
+                    <img class="card-img-top" src="{{asset('cloudinary/'.$vliste->image)}}" alt="Card image cap" style="height:130px;">
                   </div>
-              </div>
-              @endforeach
             </div>
-          </div>
-
-      </div>
+            @endforeach
+        </div>
     </div>
 </form>
-
   </section>
 
 

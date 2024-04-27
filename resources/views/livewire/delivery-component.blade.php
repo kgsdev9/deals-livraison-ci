@@ -91,11 +91,18 @@
 
                                                 <div class="col-12 col-md-2">
                                                     <label class="form-label" for="phone">
+                                                      Qte
+                                                    </label>
+                                                    <input type="number" wire:model="quantite"  class="form-control">
+                                                </div>
+
+                                                <div class="col-12 col-md-2">
+                                                    <label class="form-label" for="phone">
                                                        Prix unitaire (€)
                                                     </label>
-                                                    <input type="number" value="{{$pu}}"  readonly class="form-control">
+                                                    <input type="number" value="{{$pu}}"  readonly class="form-control" disabled>
                                                 </div>
-                                                <div class="col-12 col-md-3">
+                                                <div class="col-12 col-md-2">
                                                     <label class="form-label" for="courseCountry">Ajouter plusieurs Article </label>
                                                         <button class="btn btn-primary" type="button" wire:click="saveProducts()"> <i class="fe fe-plus"></i> Ajouter</button>
                                                 </div>
@@ -106,7 +113,9 @@
                                                       <tr>
                                                         <th scope="col">Désignation</th>
                                                         <th scope="col">Poids</th>
+                                                        <th scope="col">Qte</th>
                                                         <th scope="col">Prix Unit</th>
+                                                        <th scope="col">Total</th>
                                                         <th>Action</th>
                                                       </tr>
                                                     </thead>
@@ -118,7 +127,9 @@
                                                         @php $total =+ (int)$proct['prix'];@endphp
                                                             <td>{{$proct['designation']}}</td>
                                                             <td>{{$proct['poids']}}</td>
+                                                            <td>{{$proct['quantite']}}</td>
                                                             <td>{{$proct['prix']}}</td>
+                                                            <td>{{$proct['prix'] * $proct['quantite'] }} € </td>
                                                             <td><button class="btn btn-outline-danger" type="button" wire:click="remove({{$index}})">Retirer</button></td>
                                                         </tr>
                                                       @endforeach

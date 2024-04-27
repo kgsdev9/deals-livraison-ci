@@ -29,13 +29,15 @@
                             <tr>
                                 <th>Désignation</th>
                                 <th>Poids</th>
+                                <th>Quantite</th>
                                 <th>Prix unitaire</th>
+                                <th>Total</th>
                             </tr>
                         </thead>
                         <tbody>
                             @foreach ($listearticlelivraison as $article)
                             @php
-                                $total += $article->pu;
+                                $total += $article->pu * $article->quantite;
                             @endphp
                             <tr>
                                 <td>
@@ -48,7 +50,9 @@
                                     </a>
                                 </td>
                                 <td>{{$article->poids}}</td>
+                                <td>{{$article->quantite}}</td>
                                 <td>{{$article->pu}} € </td>
+                                <td>{{$article->pu * $article->quantite }} € </td>
                             </tr>
                             @endforeach
                             <tr>
@@ -105,7 +109,7 @@
                                     <div class="col ms-n2 mt-1">
                                         <h4 class="mb-3">Statut de la livraison </h4>
                                         <h5 class="mb-0">Votre livraison est en {{$livraison->status}} </h5>
-                                      
+
                                     </div>
                                 </div>
                             </li>
@@ -177,7 +181,7 @@
                 <p>VTP GROUP</p>
             </div>
             <div class="mt-6">
-              <a href="#" class="btn btn-outline-success">Lancer une infogérence</a>
+              <a href="https://wa.me/+33666379467?text=Je vous contace pour....." class="btn btn-outline-success" target="_blank">Lancer une infogérence</a>
             </div>
           </div>
         </div>

@@ -12,6 +12,7 @@ class Article extends Model
     protected $fillable = [
         'designation',
         'poids',
+        'quantite',
         'livraison_id',
         'pu'
     ];

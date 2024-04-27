@@ -111,7 +111,7 @@
                         <div class="justify-content center">
                             <!-- caption -->
                             <h2 class="display-4 mb-3 fw-bold text-center">Livraison Assurée par VTP! </h2>
-                            <p class="lead text-center">🚚 Livraison Assurée par VTP Livraison ! Ne vous inquiétez plus pour vos colis ! 🚚.</p>
+                            <p class="lead text-center">Livraison Assurée par VTP Livraison ! Ne vous inquiétez plus pour vos colis !</p>
                         </div>
                     </div>
                     <div class="row">
@@ -167,7 +167,7 @@
                     <div class="row justify-content-center text-center">
                         <div class="col-md-9 col-12">
                             <!-- heading -->
-                            <h2 class="display-4">  🌟 Un service de qualité assuré par une équipe de qualité 🌟</h2>
+                            <h2 class="display-4">  Un service de qualité assuré par une équipe de qualité </h2>
                             <p class="lead px-lg-8 mb-6">Nous sommes fiers de notre dévouement à fournir un service qui dépasse les attentes, à chaque interaction. Notre équipe est non seulement compétente et expérimentée, mais elle est également passionnée par ce qu'elle fait.</p>
                             <!-- button -->
                             <div class="d-grid d-md-block">

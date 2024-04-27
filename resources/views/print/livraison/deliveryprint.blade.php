@@ -23,6 +23,7 @@
                 <tr>
                     <th>Désignation</th>
                     <th>Poids</th>
+                    <th>Quantite</th>
                     <th>Prix Unitaire</th>
                     <th>Total</th>
                 </tr>
@@ -33,7 +34,7 @@
             <tbody>
                 @foreach ($lisearticle as $article)
                 @php
-                    $total +=$article->pu;
+                    $total +=$article->pu * $article->quantite;
                 @endphp
                 <tr class="text-dark">
                     <td>
@@ -41,8 +42,9 @@
 
                     </td>
                     <td>{{$article->poids}}</td>
+                    <td>{{$article->quantite}}</td>
                     <td>{{$article->pu}} €</td>
-                    <td>{{$article->pu}}</td>
+                    <td>{{$article->pu * $article->quantite }}</td>
                 </tr>
                 @endforeach
 

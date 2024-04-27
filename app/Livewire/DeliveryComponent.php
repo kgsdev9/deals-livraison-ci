@@ -30,6 +30,7 @@ class DeliveryComponent extends Component
     public $prenom_destinataire ;
     public $telephone ;
     public $adresse;
+    public $quantite = 1;
     public $poidscolis = "";
     public $images = [];
     public $tableau = [];
@@ -46,13 +47,13 @@ class DeliveryComponent extends Component
     public function changeEvent($id)
     {
         $pricelivraison =   PrixLivraison::where('id', $id)->first();
-        $this->pu =  $pricelivraison->prix;
-        $this->poids =  $pricelivraison->poids;
+        $this->pu =  $pricelivraison->prix ;
+        $this->poids =  $pricelivraison->poids ;
     }
 
     public function saveProducts()
     {
-        $this->tableau[] = ['designation' => $this->designation, 'prix' => $this->pu, 'poids' => $this->poids];
+        $this->tableau[] = ['designation' => $this->designation, 'prix' => (int)$this->pu * (int)$this->quantite, 'poids' => $this->poids, 'quantite' => $this->quantite];
         $this->resetField();
     }
 
@@ -60,6 +61,7 @@ class DeliveryComponent extends Component
     {
         $this->pu = "";
         $this->poidscolis = "";
+        $this->quantite = 1;
         $this->designation = "";
 
     }
@@ -101,14 +103,15 @@ class DeliveryComponent extends Component
             Article::create([
                 'designation' => $varticle['designation'],
                 'livraison_id' => $livraison->id,
-                'pu' => $varticle['prix'],
+                'quantite' => (int)$varticle['quantite'],
+                'pu' => (int)$varticle['prix'] * (int)$varticle['quantite'] ,
                 'poids' => $varticle['poids'],
             ]);
         }
 
         // $this->notify((new RegisterNewLivraison()));
 
-        User::find(Auth::user()->id)->notify(new RegisterNewLivraison());
+        //User::find(Auth::user()->id)->notify(new RegisterNewLivraison());
 
         return redirect()->to('/delivery/show/'. $livraison->id);
     }

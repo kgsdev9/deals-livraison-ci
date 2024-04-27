@@ -6,13 +6,14 @@
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
 		<meta name="KGs informatique" content="kgsinformatique.tech" />
+        <link rel="shortcut icon" type="image/x-icon" href="{{asset('vtp-logo.png')}}" />
 		<!-- Libs CSS -->
 		<link rel="stylesheet" href="{{asset('assets/fonts/feather/feather.css')}}">
 		<link rel="stylesheet" href="{{asset('assets/libs/bootstrap-icons/font/bootstrap-icons.min.css')}}">
 		<link rel="stylesheet" href="{{asset('assets/libs/simplebar/dist/simplebar.min.css')}}">
 		<!-- Theme CSS -->
 		<link rel="stylesheet" href="{{asset('assets/css/theme.min.css')}}">
-		<link rel="Chap" href="lives.ci">
+		<link rel="Chap" href="VTP LIVRAISON">
 
 		<link rel="stylesheet" href="{{asset('assets/select2-bootstrap4.min.css')}}">
 		<link rel="stylesheet" href="{{asset('assets/select2.min.css')}}">
@@ -23,7 +24,7 @@
 		<nav class="navbar navbar-expand-lg">
 			<div class="container px-0">
 				<a class="navbar-brand text-dark" href="/">
-					VTP
+					<img src="{{asset('vtp-logo.png')}}" alt="Vtp" style="height:40px;">
 					<div class="d-flex align-items-center order-lg-3 ms-lg-3">
 						<div class="d-flex align-items-center">
 							<a href="{{route('create.delivery')}}" class="btn btn-warning d-md-block"> <i class="fe fe-plus"></i> Déposer</a>
@@ -47,8 +48,9 @@
 						<ul class="navbar-nav ms-auto">
 							<li class="nav-item"><a class="nav-link" href="{{route('home')}}">Accueil</a></li>
 							<li class="nav-item"><a class="nav-link" href="{{route('depart.index')}}">Départs Imminents </a></li>
-                            <li class="nav-item"><a class="nav-link" href="#" >Notre équipe</a></li>
-							<li class="nav-item"><a class="nav-link" href="#">Nos partenaires</a></li>
+                            <li class="nav-item"><a class="nav-link" href="/contact" >Contact</a></li>
+                            <li class="nav-item"><a class="nav-link" href="https://vtp-market.com/" target="_blank">VTP MARKET</a></li>
+							<li class="nav-item"><a class="nav-link" href="https://vtp-formation.com/" target="_blank">VTP FORMATION</a></li>
 						</ul>
 					</div>
 				</div>
@@ -70,7 +72,7 @@
 							<nav class="nav nav-footer">
 								<a class="nav-link ps-0" href="{{route('create.delivery')}}">DEPOSER UNE LIVRAISON </a>
 								<a class="nav-link px-2 px-md-3" href="{{route('depart.index')}}">DEPARTS IMMINENTS</a>
-								<a class="nav-link" href="#">FAQ</a>
+								<a class="nav-link" href="{{URL('/comment-ca-marche')}}">FAQ</a>
 							</nav>
 						</div>
 					</div>

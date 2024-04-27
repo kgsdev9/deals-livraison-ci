@@ -41,4 +41,11 @@ Route::get('delete-payment/{id}', [DeliveryController::class, 'remove'])->name('
 Route::get('/delivery/print/{id}', [InvoiceController::class, 'invoicedelivery'])->name('delivery.invoice');
 Route::get('/users', UserController::class)->name('gestion.users');
 Route::get('/depart-imminents', [HomeController::class ,'listeDepart'])->name('depart.index');
+Route::get('/contact', function() {
+    return view('contact');
+});
+
+Route::get('/comment-ca-marche', function() {
+    return view('comment-ca-marche');
+});
 Auth::routes();
